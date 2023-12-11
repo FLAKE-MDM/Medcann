@@ -1,0 +1,38 @@
+.footer{
+    padding: 5.2rem 0 4.7rem;
+    margin-top: auto;
+    @include bp(md){
+        padding: 2.4rem 0 1rem;
+    }
+    &__logo{
+        width: 10.2rem;
+        margin-right: 4.2%;
+    }
+    &-nav{
+        .nav-list__item{
+            margin-right: 3.35rem;
+            padding: 1.2rem 0;
+        }
+        .circle-arrow{
+            top: -0.1rem;
+        }
+    }
+    &__phone{
+        margin: 0.5rem 0 0;
+        @include bp(sm){
+            align-items: center;
+            margin: 0;
+            display: inline-flex;
+        }
+        .icon{
+            margin-right: 1.7rem;
+            @include bp(sm){
+                margin-right: 1.2rem;
+            }
+        }
+    }
+    &__social-list{
+        margin: 0.3rem 0 0 4rem;
+    }
+}
+

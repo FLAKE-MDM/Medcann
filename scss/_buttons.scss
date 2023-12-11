@@ -1,0 +1,110 @@
+.btn{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    padding: 1.45rem 2.4rem;
+    line-height: normal;
+    font-weight: 400;
+    overflow: hidden;
+    transition: all 0.3s ease-out;
+    position: relative;
+    border: 1px solid #fff;
+    border-radius: 10rem;
+    color: #fff;
+    flex-shrink: 0;
+
+    @include bp(hv){
+        &:hover{
+            color: #fff;
+        }
+    }
+
+    &:disabled, &.disabled{
+        cursor: default;
+        pointer-events: none;
+        background: gray;
+        color: gray;
+    }
+
+    // &_primary{
+    //     background: $primary;
+    //     border-color: $primary;
+
+    //     @include bp(hv){
+    //         &:hover{
+    //             background: darken($color: $primary, $amount: 10);
+    //             border-color: darken($color: $primary, $amount: 10);
+    //         }
+    //     }
+    // }
+
+    // &_light{
+    //     background:#fff;
+    //     color: $secondary;
+
+    //     @include bp(hv){
+    //         &:hover{
+    //             background: $primary;
+    //             border-color: $primary;
+    //         }
+    //     }
+    // }
+
+    // &_transparent{
+    //     background:none;
+
+    //     @include bp(hv){
+    //         &:hover{
+    //             background: $primary;
+    //             border-color: $primary;
+    //         }
+    //     }
+    // }
+
+    // &_transparent-primary{
+    //     background: none;
+    //     border-color: $primary;
+    //     color: $primary;
+
+    //     @include bp(hv){
+    //         &:hover{
+    //             background: $primary;
+    //             border-color: $primary;
+    //         }
+    //     }
+    // }
+
+    // &_transparent-secondary{
+    //     background: none;
+    //     border-color: $secondary;
+    //     color: $secondary;
+
+    //     @include bp(hv){
+    //         &:hover{
+    //             background: $secondary;
+    //             border-color: $secondary;
+    //         }
+    //     }
+    // }
+
+    &_size{
+        // &-xs{
+        //     padding: 0.2rem 1.6rem;
+        //     border-radius: 30px;
+        //     .btn__icon{
+        //         margin: -0.2rem -1.4rem 0 11px;
+        //     }
+        // }
+        // &-sm{
+        //     padding: 0.9rem 1.6rem;
+        // }
+        &-md{
+            padding: 1.45rem 5.6rem;
+        }
+    }
+}
+
+

@@ -1,0 +1,150 @@
+// collapse
+.collapse:not(.show) {
+  display: none;
+}
+.collapsing {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.35s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .collapsing {
+    transition: none;
+  }
+}
+.tab-content>.tab-pane {
+  display: none;
+}
+.tab-content>.active {
+  display: block;
+}
+.fade {
+  transition: opacity .15s linear;
+}
+
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1055;
+  transform: translateY(-100%);
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+  background: rgba(#000, 0.3);
+  backdrop-filter: blur(2px);
+
+  &.show{
+    transform: none;
+  }
+  
+  &__close{
+    position: absolute;
+    top: 2.4rem;
+    right: 2.4rem;
+    border: none;
+    background: none;
+    border-radius: 50%;
+
+    @include bp(sm){
+      right: 1rem;
+      top: 1.4rem;
+    }
+  }
+  &__content{
+    flex-grow: 1;
+    pointer-events: auto;
+    background: #fff;
+    border-radius: 2.6rem;
+    color: #fff;
+    padding: 4rem;
+  }
+
+  &__header{
+    margin-bottom: 3rem;
+  }
+}
+
+.modal-dialog {
+  position: relative;
+  pointer-events: auto;
+  margin: 3rem 1rem;
+
+  @include bp(sm-up){
+    width: 50rem;
+    margin: 5rem auto;
+  }
+}
+.modal .modal-dialog {
+  transition: transform .3s ease-out;
+  transform: translate(0,-50px);
+}
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+
+// dropdown
+.dropdown{
+  position: relative;
+}
+.dropdown-menu{
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 100%;
+  margin: 0.8rem 0 0;
+  background: #FFFFFF;
+  box-shadow: 0px 12px 30px rgba(45, 45, 45, 0.18);
+  border-radius: 0.3rem;
+  top: 100%;
+  overflow: hidden;
+
+  &__link{
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+    display: block;
+    padding: 1.2rem 1.6rem;
+    @include bp(md){
+      padding: 1rem 2rem 1rem 3rem;
+    }
+    &.active{
+      background: #ECF3EA;
+    }
+  }
+}
+.open .dropdown-menu {
+  display: block;
+}
+.dropdown-toggle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-right: 2.5rem;
+
+  &::after{
+    content: "";
+    display: inline-block;
+    width: 1.2rem;
+    height: 0.8rem;
+    top: 0.5rem;
+    right: 0;
+    background: url(../img/icons/caret.svg) no-repeat;
+    background-size: contain;
+    transition: all 0.3s ease-out;
+    position: absolute;
+    bottom: 0;
+    margin: auto;
+  }
+
+  &.active{
+    &::after{
+      top: -0.4rem;
+      transform: rotate(180deg);
+    }
+  }
+}
+
