@@ -1,1 +1,1 @@
-# Medcann
+# [Medcann](https://flake-mdm.github.io/Medcann/)
