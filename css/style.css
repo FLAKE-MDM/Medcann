@@ -3045,7 +3045,7 @@ body.overflow-none {
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
+  width: 300%;
   right: 100%;
   top: -8rem;
   bottom: 0;
