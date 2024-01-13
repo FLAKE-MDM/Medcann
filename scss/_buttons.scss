@@ -4,15 +4,13 @@
     justify-content: center;
     text-align: center;
     white-space: nowrap;
-    font-size: 1.6rem;
-    padding: 1.45rem 2.4rem;
-    line-height: normal;
-    font-weight: 400;
+    font: 400 2rem/normal 'Inter', sans-serif;
+    padding: 1.4rem 3.15rem 1.5rem;
     overflow: hidden;
     transition: all 0.3s ease-out;
     position: relative;
-    border: 1px solid #fff;
-    border-radius: 10rem;
+    border: 1px solid transparent;
+    border-radius: 0;
     color: #fff;
     flex-shrink: 0;
 
@@ -29,17 +27,120 @@
         color: gray;
     }
 
-    // &_primary{
-    //     background: $primary;
-    //     border-color: $primary;
+    &_outline{
+        color: $primary;
+        border-color: $primary;
+        background: none;
 
-    //     @include bp(hv){
-    //         &:hover{
-    //             background: darken($color: $primary, $amount: 10);
-    //             border-color: darken($color: $primary, $amount: 10);
-    //         }
-    //     }
-    // }
+        @include bp(hv){
+            &:hover{
+                background: $secondary;
+                border-color:$secondary;
+                color: #fff;
+            }
+        }
+
+        &:active, &.active{
+            background: $secondary;
+            border-color:$secondary;
+            color: #fff;
+        }
+    }
+
+    &_outline-light{
+        border-color: $light;
+        background: transparent;
+
+        @include bp(hv){
+            &:hover{
+                background: $light;
+                border-color: $light;
+                color: $secondary;
+            }
+        }
+
+        &:active, &.active{
+            background: $light;
+            border-color: $light;
+            color: $secondary;
+        }
+    }
+
+    &_outline-inversion{
+        border-color: #fff;
+        background: transparent;
+
+        @include bp(hv){
+            &:hover{
+                background: #fff;
+                border-color: #fff;
+                color: $secondary;
+            }
+        }
+
+        &:active, &.active{
+            background: #fff;
+            border-color: #fff;
+            color: $secondary;
+        }
+    }
+
+    &_light{
+        background: $light;
+        color: $secondary;
+        border-color: $light;
+
+        @include bp(hv){
+            &:hover{
+                background: darken($color: $light, $amount: 15);
+                border-color: darken($color: $light, $amount: 15);
+                color: $secondary;
+            }
+        }
+
+        &:active, &.active{
+            background: darken($color: $light, $amount: 15);
+            border-color: darken($color: $light, $amount: 15);
+            color: $secondary;
+        }
+    }
+
+    &_inversion{
+        background: #fff;
+        color: $secondary;
+        border-color: #fff;
+
+        @include bp(hv){
+            &:hover{
+                background: darken($color: #fff, $amount: 15);
+                border-color: darken($color: #fff, $amount: 15);
+                color: $secondary;
+            }
+        }
+
+        &:active, &.active{
+            background: darken($color: #fff, $amount: 15);
+            border-color: darken($color: #fff, $amount: 15);
+            color: $secondary;
+        }
+    }
+
+    &_secondary{
+        background: $secondary;
+        border-color: $secondary;
+
+        @include bp(hv){
+            &:hover{
+                background: darken($color: $secondary, $amount: 10);
+                border-color: darken($color: $secondary, $amount: 10);
+            }
+        }
+
+        &:active, &.active{
+            background: darken($color: $secondary, $amount: 10);
+            border-color: darken($color: $secondary, $amount: 10);
+        }
+    }
 
     // &_light{
     //     background:#fff;
@@ -98,11 +199,40 @@
         //         margin: -0.2rem -1.4rem 0 11px;
         //     }
         // }
-        // &-sm{
-        //     padding: 0.9rem 1.6rem;
-        // }
+        &-sm{
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
         &-md{
-            padding: 1.45rem 5.6rem;
+            
+        }
+
+        &-lg{
+            @include bp(md-up){
+                font-size: 2.4rem;
+                letter-spacing: -0.168rem;
+                padding: 2.2rem 5rem 1.9rem;
+            }
+
+            @include bp(sm){
+                letter-spacing: -0.14rem;
+            }
+        }
+
+        &-xl{
+            @include bp(xl-up){
+                font-size: 2.4rem;
+                letter-spacing: -0.168rem;
+                padding: 2.2rem 6.25rem 1.9rem;
+            }
+        }
+
+        &-xxl{
+            @include bp(md-up){
+                font-size: 2.4rem;
+                letter-spacing: -0.168rem;
+                padding: 2.2rem 7.75rem 2rem;
+            }
         }
     }
 }

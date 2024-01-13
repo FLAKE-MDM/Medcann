@@ -31,54 +31,177 @@
             opacity: 0;
         }
     }
-    .active>&, .components-item.active &{
+
+    .active>&, .components-item.active &, a:hover .circle &, .doc-item:hover &{
         &:before{opacity: 0;}
         &:after{opacity: 1;}
     }
 }
+
+.icon-arrow-down-inversion{
+    width: 1.6rem;
+    height: 2.5rem;
+    background-image: url(../img/icons/arrow-down-inversion.svg);
+}
+
+.icon-info-1{
+    width: 9.5rem;
+    height: 9.5rem;
+    background-image: url(../img/icons/info-1.svg);
+
+    @include bp(sm){
+        width: 7.2rem;
+        height: 7.2rem;
+    }
+}
+
+.icon-info-2{
+    width: 11.2rem;
+    height: 9.8rem;
+    background-image: url(../img/icons/info-2.svg);
+
+    @include bp(sm){
+        width: 8.4rem;
+        height: 7.4rem;
+    }
+}
+
+.icon-info-3{
+    width: 10.6rem;
+    height: 10.6rem;
+    background-image: url(../img/icons/info-3.svg);
+
+    @include bp(sm){
+        width: 8rem;
+        height: 8rem;
+    }
+}
+
+.icon-info-4{
+    width: 10.3rem;
+    height: 9.1rem;
+    background-image: url(../img/icons/info-4.svg);
+
+    @include bp(sm){
+        width: 7.8rem;
+        height: 6.9rem;
+    }
+}
+
+.icon-flower-dark{
+    width: 4rem;
+    height: 4rem;
+    background-image: url(../img/icons/flower-dark.svg);
+
+    @include bp(sm){
+        width: 2.7rem;
+        height: 2.7rem;
+    }
+}
+
+.icon-flower{
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url(../img/icons/flover-primary.svg);
+
+    // @include bp(sm){
+    //     width: 2.7rem;
+    //     height: 2.7rem;
+    // }
+}
+
+.icon-flower-inversion{
+    width: 3.8rem;
+    height: 3.8rem;
+    background-image: url(../img/icons/flower-inversion.svg);
+
+}
+
+.icon-arrow-inversion{
+    width: 2.5rem;
+    height: 1.6rem;
+    background-image: url(../img/icons/arrow-inversion.svg);
+}
+
+.icon-arrow{
+    width: 2.5rem;
+    height: 1.6rem;
+
+    &:before{
+        background-image: url(../img/icons/arrow.svg);
+    }
+
+    &:after{
+        background-image: url(../img/icons/arrow-inversion.svg);
+    }
+}
+
 .icon-vk{
-    background-image: url(../img/icons/vk.png);
+    width: 1.8rem;
+    height: 1.1rem;
+    background-image: url(../img/icons/vk.svg);
 }
-.icon-fb{
-    background-image: url(../img/icons/fb.png);
+
+.icon-tg{
+    width: 1.7rem;
+    height: 1.3rem;
+    background-image: url(../img/icons/tg.svg);
 }
-.icon-ins{
-    background-image: url(../img/icons/ins.png);
+
+.icon-youtube{
+    width: 1.8rem;
+    height: 1.2rem;
+    background-image: url(../img/icons/youtube.svg);
 }
-.icon-yt{
-    background-image: url(../img/icons/yt.png);
+
+.icon-zen{
+    width: 1.4rem;
+    height: 1.4rem;
+    background-image: url(../img/icons/zen.svg);
 }
+
+.icon-info{
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url(../img/icons/info.svg);
+}
+
+.icon-arrow-down{
+    width: 1.6rem;
+    height: 1.4rem;
+
+    &:before{
+        background-image: url(../img/icons/arrow-down.svg);
+    }
+
+    &:after{
+        background-image: url(../img/icons/arrow-down-active.svg);
+    }
+}
+
+.icon-close{
+    width: 4.8rem;
+    height: 4.8rem;
+    background-image: url(../img/icons/close.svg);
+
+    @include bp(sm){
+        width: 3.4rem;
+        height: 3.4rem;
+    }
+}
+
+
+
+
+
+
+
+
 .icon-{
     width: rem;
     height: rem;
-    background-image: url(../img/icons/.png);
+    background-image: url(../img/icons/.svg);
 }
-.icon-{
-    width: rem;
-    height: rem;
-    background-image: url(../img/icons/.png);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .icon-{
     width: rem;

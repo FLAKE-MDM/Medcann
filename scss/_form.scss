@@ -1,19 +1,39 @@
 .form{
     &-group{
+        margin-bottom: 5.5rem;
 
+        @include bp(sm){
+            margin-bottom: 3.2rem;
+        }
+
+        &_md{
+            margin-bottom: 3.7rem;
+
+            @include bp(sm){
+                margin-bottom: 3.2rem;
+            }
+        }
     }
+
     &-control{
         font-family: inherit;
         display: block;
-        border: 1px solid #CBCBCB;
-        border-radius: 5px;
-        padding: 1.3rem 1.9rem;
+        border: none;
+        border-radius: 0;
+        padding: 2.3rem 0 2rem;
         width: 100%;
-        font-size: 1.4rem;
+        font-size: 2.4rem;
         line-height: 2rem;
         font-weight: 400;
         background: transparent;
         transition: all 0.3s ease-out;
+        border-bottom: 1px solid rgba($primary, 0.2);
+
+        @include bp(sm){
+            font-size: 1.8rem;
+            padding-bottom: 1.7rem;
+        }
+
         &.has-error{
             border-color: $danger;
             &::-webkit-input-placeholder{color:$danger!important}
@@ -27,8 +47,23 @@
 
         }
         &:focus{
-
+            border-color: $primary;
         }
+
+        &_inversion{
+            border-color: rgba(255,255,255,0.2);
+            color: #fff;
+
+            &:focus{
+                border-color: #fff;
+            }
+
+            ::-webkit-input-placeholder{color: #6d85a9!important}
+            ::-moz-placeholder{color: #6d85a9!important}
+            :-moz-placeholder{color: #6d85a9!important}
+            :-ms-input-placeholder{color: #6d85a9!important}
+        }
+
         &_date{
             background: url(../img/icons/calendar.svg) 94% 50% no-repeat;
             background-size: 15px 16px;
@@ -36,21 +71,21 @@
                 background-position: 94% 50%;
             }
         }
-        &_xs{
-            text-align: center;
-            width: 4.4rem;
-            padding: 1.3rem 1rem;
-            @include bp(sm){
-                width: 4.6rem;
-            }
-        }
-        &_lg{
-            padding: 2.3rem 2.4rem;
-            font-size: 1.6rem;
-            @include bp(sm){
-                padding: 2.2rem 2.3rem;
-            }
-        }
+        // &_xs{
+        //     text-align: center;
+        //     width: 4.4rem;
+        //     padding: 1.3rem 1rem;
+        //     @include bp(sm){
+        //         width: 4.6rem;
+        //     }
+        // }
+        // &_lg{
+        //     padding: 2.3rem 2.4rem;
+        //     font-size: 1.6rem;
+        //     @include bp(sm){
+        //         padding: 2.2rem 2.3rem;
+        //     }
+        // }
     }
     &-check-input{
         flex-shrink: 0;
@@ -239,4 +274,55 @@
         box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
     }
+}
+
+/* Juro */
+.input--juro {
+	overflow: hidden;
+}
+
+.input__label--juro {
+	position: absolute;
+    top: -0.3rem;
+    left: 0;
+    color: rgba($primary, 0.5);
+}
+
+.input__label-content--juro {
+	padding: 2.6rem 0 2rem;
+    letter-spacing: -0.168rem;
+    font-size: 2.4rem;
+    display: block;
+	transition: all 0.2s ease-out;
+
+    @include bp(sm){
+        font-size: 1.8rem;
+        letter-spacing: -0.126rem;
+    }
+}
+
+.input__field--juro:focus + .input__label--juro .input__label-content--juro,
+.input--filled .input__label--juro .input__label-content--juro {
+	color: $primary;
+	font-size: 1.5rem;
+    line-height: 1rem;
+    letter-spacing: -0.105rem;
+    padding: 0;
+}
+
+.form-control_inversion + .input__label--juro {
+    color: rgba(255,255,255, 0.4);
+}
+
+.input__field--juroform-control_inversion:focus + .input__label--juro .input__label-content--juro,
+.input--filled .form-control_inversion +.input__label--juro .input__label-content--juro{
+    color: #fff;
+}
+
+.input--filled .form-control{
+    border-color: $primary;
+}
+
+.input--filled .form-control_inversion{
+    border-color: #fff;
 }

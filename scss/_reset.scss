@@ -7,10 +7,10 @@
 }
 ol, ul {list-style: none;}
 :focus {	outline: 0;}
-::-webkit-input-placeholder{text-indent: 0px; transition: text-indent 0.3s ease;font-family: inherit;color:#949494!important}
-::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;font-family: inherit;color:#949494!important}
-:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;font-family: inherit;color:#949494!important}
-:-ms-input-placeholder{ text-indent: 0px;   transition: text-indent 0.3s ease;font-family: inherit;color:#949494!important}
+::-webkit-input-placeholder{text-indent: 0px; transition: text-indent 0.3s ease;font-family: inherit;color:#8095a4!important}
+::-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;font-family: inherit;color:#8095a4!important}
+:-moz-placeholder{opacity: 1; transition: opacity 0.3s ease;font-family: inherit;color:#8095a4!important}
+:-ms-input-placeholder{ text-indent: 0px;   transition: text-indent 0.3s ease;font-family: inherit;color:#8095a4!important}
 :focus::-webkit-input-placeholder{ text-indent: -1000px; transition: text-indent 0.3s ease;}
 :focus::-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}
 :focus:-moz-placeholder{opacity: 0; transition: opacity 0.3s ease;}

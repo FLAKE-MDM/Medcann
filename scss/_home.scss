@@ -1,0 +1,1281 @@
+.preview{
+  background: url(../img/preview-bg.jpg) 50% 50% no-repeat;
+  background-size: cover;
+  padding: 11.8rem 0 35.3rem;
+  position: relative;
+  overflow: hidden;
+
+  @include bp(sm){
+    min-height: 66rem;
+    padding: 3.7rem 1.6rem 16.4rem;
+    background: #052040 url(../img/preview-bg-m.jpg) 50% 100% no-repeat;
+    background-size: 100% auto;
+    margin-bottom: 3.8rem;
+
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: -0.9rem;
+    width: 79.3rem;
+    height: 79.3rem;
+    background: url(../img/icons/preview-after.svg) 0 0 no-repeat;
+    background-size: contain;
+    transform: translateY(50%);
+
+    @include bp(lg){
+      width: 50rem;
+      height: 50rem;
+    }
+
+    @include bp(sm){
+      width: 37.5rem;
+      right: 0;
+      height: 37.5rem;
+    }
+  }
+
+  &__text{
+    width: 90rem;
+    max-width: 100%;
+    padding-left: 0.2rem;
+    margin-bottom: 10.7rem;
+
+    @include bp(sm){
+      order: 2;
+      padding: 2.9rem 0 0;
+    }
+  }
+
+  &__title{
+    @include bp(xxxl-up){
+      font-size: 12rem;
+    }
+  }
+
+  &-home{
+    padding: 10.2rem 0 13rem;
+    background: rgba(7, 38, 75, 0.60) url(../img/preview-home-bg.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 11.5rem;
+
+    @include bp(lg){
+      padding: 5.5rem 0;
+    }
+
+    @include bp(sm){
+      height: 66rem;
+      padding: 5.5rem 1.6rem 4.1rem;
+      display: flex;
+      background-position: 34.6% 50%;
+      margin-bottom: 5.7rem;
+    }
+
+    .container{
+      display: flex;
+      flex-direction: column;
+    }
+
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 7.3rem;
+      bottom: 0;
+      width: 8rem;
+      height: 39.1rem;
+      background: url(../img/icons/flower.svg) 0 0 no-repeat;
+
+      @include bp(md){
+        height: 25rem;
+      }
+
+      @include bp(sm){
+        width: 5rem;
+        height: 9.4rem;
+        background-size: 100% auto;
+        right: 4.2rem;
+      }
+    }
+
+    &__text{
+      width: 53rem;
+      max-width: 100%;
+
+      @include bp(sm){
+        padding-right: 1.5rem;
+      }
+    }
+
+    &__title{
+      margin-bottom: 8.7rem;
+
+      @include bp(sm){
+        margin: auto 0 3.9rem;
+      }
+    }
+  }
+}
+
+// info
+.info{
+  &-section{
+    @include bp(sm){
+      padding-bottom: 1.4rem;
+    }
+
+    &__text{
+      width: 128rem;
+      max-width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__content{
+      display: grid;
+      grid-template-columns: 41.6% auto;
+      grid-gap: 9%;
+      padding-bottom: 14.1rem;
+      border-bottom: 1px solid $primary;
+      margin-bottom: 8.8rem;
+
+      @include bp(xl){
+        grid-gap: 3rem;
+        grid-template-columns: 38% auto;
+      }
+
+      @include bp(md){
+        grid-template-columns: 100%;
+        padding-bottom: 5rem;
+      }
+
+      @include bp(sm){
+        grid-gap: 1.8rem;
+        border: none;
+        margin-bottom: 4rem;
+        padding-bottom: 0;
+      }
+    }
+
+    &__col{
+      padding: 0.9rem 5% 0 0;
+
+      .text_size-lg{
+        width: 73.5rem;
+        max-width: 100%;
+        letter-spacing: -0.168rem;
+
+        @include bp(xl){
+          width: 100%;
+        }
+
+        @include bp(sm){
+          font-size: 1.8rem;
+          letter-spacing: -0.126rem;
+          line-height: 1.22;
+        }
+      }
+
+      .mb-xl{
+        @include bp(sm){
+          margin-bottom: 3.3rem;
+        }
+      }
+    }
+
+    &__group{
+      padding-top: 0.5rem;
+    }
+  }
+
+  &-item {
+    padding: 5.7rem 4rem 2.7rem;
+    background: #fff;
+    min-height: 54.5rem;
+    display: flex;
+    flex-direction: column;
+
+    @include bp(xxl){
+      padding: 4rem 2rem 1rem;
+    }
+
+    @include bp(xl){
+      min-height: 45rem;
+    }
+
+    @include bp(lg){
+      min-height: 36rem;
+    }
+
+    @include bp(sm){
+      padding: 2.8rem 2.4rem 1.5rem;
+      margin-bottom: 1.6rem;
+    }
+
+    &__icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12.6rem;
+
+      @include bp(sm){
+        width: auto;
+        display: block;
+      }
+    }
+
+    &__title {
+      margin: auto 0 4rem;
+      line-height: 1.04;
+
+      @include bp(xl){
+        margin: auto 0 2.7rem;
+      }
+    }
+  }
+}
+
+// statistics-section
+.statistics{
+  &-section{
+    background: rgba(7, 38, 75, 0.30) url(../img/statistics-section-bg.jpg) 0 0 no-repeat;
+    background-size: cover;
+    padding: 9.7rem 10.1rem 6.7rem;
+    display: grid;
+    grid-template-columns: auto 55.2%;
+    min-height: 91.3rem;
+    grid-gap: 0 3rem;
+
+    @include bp(xxl){
+      padding: 5rem;
+    }
+
+    @include bp(lg){
+      display: block;
+    }
+
+    @include bp(md){
+      padding: 5.5rem 3.2rem 3.8rem;
+    }
+
+    @include bp(sm){
+      margin: 0 -1.6rem 2rem;
+
+    }
+
+    &__group{
+      margin-top: auto;
+      grid-row: span 2;
+      padding: 0 2.5rem 0 0;
+      grid-gap: 4.5rem 16%;
+
+      @include bp(xl){
+        grid-gap: 2rem 4rem;
+        padding: 0;
+      }
+
+      @include bp(lg){
+        margin: 3rem 0;
+      }
+
+      @include bp(sm){
+        margin: 3.7rem 0 4.8rem;
+      }
+    }
+
+    &__link{
+      margin: auto 0 1.7rem 0.1rem;
+    }
+  }
+
+  &-item{
+    @include bp(sm){
+      margin-bottom: 2.4rem;
+      margin-right: -2rem;
+    }
+
+    &__title{
+      letter-spacing: 0;
+      font-size: 4.8rem;
+      padding-bottom: 0.1rem;
+
+      @include bp(sm){
+        font-size: 3.2rem;
+      }
+    }
+
+    &__icon{
+      margin: 0 0.7rem;
+
+      @include bp(sm){
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+
+// category
+.category{
+  &-section{
+    padding: 7.3rem 5.8rem 9rem;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 33% auto;
+    grid-gap: 0 3rem;
+
+    @include bp(xxxl){
+      padding: 5rem 4rem;
+    }
+
+    @include bp(xl){
+      display: block;
+    }
+
+    @include bp(sm){
+      margin: 0 -1.6rem 2rem;
+      padding: 3.7rem 2.4rem 3.1rem;
+    }
+
+    &__title{
+      margin-bottom: auto;
+
+      @include bp(xl){
+        margin-bottom: 2rem;
+      }
+
+      @include bp(sm){
+        margin-bottom: 0.9rem;
+      }
+    }
+
+    &__text{
+      padding: 2.9rem 0 3.4rem 4.2rem;
+
+      @include bp(xxl){
+        padding: 0;
+      }
+    }
+  }
+
+  &-item{
+    padding: 2.8rem 0 2.7rem;
+    border-bottom: 1px solid rgba($primary, 0.1);
+
+    @include bp(sm){
+      padding: 1.7rem 0;
+      margin-bottom: 0.15rem;
+    }
+
+    &__title{
+      position: relative;
+      padding-right: 50%;
+      display: flex;
+
+      @include bp(md){
+        padding-right: 4rem;
+      }
+
+      &.active{
+        color: #0043AB;
+
+        &:after{
+          transform: none;
+        }
+      }
+
+      &:before, &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 2.3rem;
+        width: 3rem;
+        height: 0.2rem;
+        background: $primary;
+        transition: all 0.3s ease-out;
+
+        @include bp(lg){
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+
+        @include bp(sm){
+          width: 2.4rem;
+        }
+      }
+
+      &:after{
+        transform: rotate(90deg);
+      }
+    }
+
+    &__body{
+      display: grid;
+      grid-template-columns: 43% auto;
+      grid-gap: 0 10%;
+
+      @include bp(md){
+        grid-gap: 0 3rem;
+      }
+
+      @include bp(sm){
+        display: block;
+      }
+    }
+
+    &__text{
+      padding: 2.7rem 0 1.4rem;
+
+      @include bp(sm){
+        padding: 3.4rem 3rem 1.4rem 0;
+      }
+
+      .btn{
+        @include bp(sm){
+          font-size: 1.8rem;
+          padding: 1.2rem 3.15rem 1.3rem;
+        }
+      }
+
+      p{
+        @include bp(sm){
+          margin-bottom: 2.4rem;
+        }
+      }
+    }
+
+    &__image{
+      transition: all 0.3s ease-out;
+      transition-delay: 0.3s;
+      margin-left: 0.1rem;
+      margin-bottom: -2.8rem;
+
+      @include bp(md){
+        margin-top: 2.7rem;
+      }
+
+      @include bp(sm){
+        display: flex;
+        justify-content: center;
+        margin-top: 0.4rem;
+        margin-bottom: -1.7rem;
+      }
+
+      .show &{
+        @include bp(lg-up){
+          margin-top: -3.5rem;
+        }
+      }
+
+      img{
+        @include bp(sm){
+          width: 16.6rem;
+        }
+      }
+    }
+  }
+}
+
+// advantages
+.advantages{
+  &-section{
+    background: #001D33 url(../img/advantages-bg.jpg) 50% 0 no-repeat;
+    background-size: 100% auto;
+    padding: 14.3rem 10rem 13rem;
+
+    @include bp(xxl){
+      padding: 7rem 5rem;
+    }
+
+    @include bp(lg){
+      display: flex;
+      flex-direction: column;
+      padding-top: 30.3rem;
+    }
+
+    @include bp(sm){
+      margin: 0 -1.6rem;
+      padding: 30.3rem 3.2rem 5.2rem;
+    }
+
+    &_padding{
+      padding-bottom: 13.6rem;
+
+      @include bp(sm){
+        padding-bottom: 0.8rem;
+        background-size: auto 70%;
+        background-position: 53% 0;
+      }
+    }
+
+    &__title{
+      @include bp(lg){
+        order: -1;
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__content{
+      display: grid;
+      grid-template-columns: 25.5% 27.2% 31%;
+      grid-gap: 13.6rem 8.1%;
+      margin: -4.9rem -2rem 0 0;
+
+      @include bp(xxxl){
+        grid-template-columns: 30% 30% 30%;
+        grid-gap: 7rem 3rem;
+        margin: 0 -2rem 0 0;
+      }
+
+      @include bp(xxxl){
+        grid-template-columns: 30% 32% 35%;
+      }
+
+      @include bp(xl){
+        grid-template-columns: 49% auto;
+        margin: 0;
+      }
+
+      @include bp(sm){
+        grid-template-columns: 100%;
+        grid-gap: 3.4rem 0;
+      }
+    }
+
+    &__text{
+      margin-bottom: 16.5rem;
+      width: 52rem;
+      max-width: 100%;
+
+      @include bp(xl){
+        margin-bottom: 8rem;
+      }
+
+      @include bp(lg){
+        margin-bottom: 5rem;
+      }
+
+      @include bp(sm){
+        margin-bottom: 3.9rem;
+      }
+    }
+
+    &__text-end{
+      grid-row: span 2;
+      margin: auto 1rem -0.5rem 0;
+
+      @include bp(xl){
+        grid-column: span 2;
+        margin-top: 2rem;
+      }
+
+      @include bp(lg){
+        display: none;
+      }
+    }
+  }
+
+  &-group{
+    padding: 11.4rem 10rem 12.7rem;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 40% 24% 20%;
+    grid-gap: 8.2rem 7%;
+
+    @include bp(xxl){
+      padding: 5rem 3rem;
+    }
+
+    @include bp(xl){
+      grid-template-columns: 50% 50%;
+      grid-gap: 3rem;
+    }
+
+    @include bp(sm){
+      margin: 0 -1.6rem 9.1rem;
+      padding: 3.8rem 3.2rem 5.4rem;
+      grid-template-columns: 100%;
+      grid-gap: 2.5rem;
+    }
+
+    .advantages-item__icon{
+      margin: 0.5rem 0 3.1rem 0;
+
+      @include bp(sm){
+        width: 5.2rem;
+        margin: 1rem 0 1.8rem;
+      }
+    }
+
+    .advantages-item{
+      padding-right: 5%;
+
+      @include bp(sm){
+        padding: 0;
+      }
+
+      &__title{
+        font-weight: normal;
+
+        @include bp(sm){
+          letter-spacing: 0;
+          font-size: 2.4rem;
+          line-height: 1.02;
+        }
+      }
+    }
+
+    &__content{
+      grid-row: span 2;
+
+      @include bp(xl){
+        grid-row: span 1;
+        grid-column: span 2;
+      }
+
+      @include bp(sm){
+        grid-column: span 1;
+      }
+    }
+
+    &__text{
+      width: 46rem;
+      max-width: 100%;
+      letter-spacing: -0.168rem;
+      margin: auto 0 0.7rem 0.2rem;
+      line-height: normal;
+
+      @include bp(xl){
+        margin-top: 2rem;
+      }
+
+      @include bp(sm){
+        margin: 2.8rem 0 0.5rem;
+        letter-spacing: -0.154rem;
+        line-height: 1.22;
+      }
+    }
+  }
+
+  &-item{
+    &__icon{
+      margin: 0 0 2.4rem 0.2rem;
+
+      @include bp(sm){
+        margin-bottom: 1.8rem;
+      }
+    }
+  }
+}
+
+.advantages-links{
+  padding: 8.1rem 10rem 7.2rem;
+  position: relative;
+
+  @include bp(xl){
+    padding: 5rem 4rem;
+  }
+
+  @include bp(lg){
+    padding: 3rem 2rem;
+    flex-direction: column;
+  }
+
+  @include bp(sm){
+    margin-left: -1.6rem;
+    margin-right: -1.6rem;
+    padding: 3.9rem 2rem 4.8rem;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 10rem;
+    bottom: 0;
+    width: 8rem;
+    height: 15rem;
+    background: url(../img/icons/flower.svg) 0 0 no-repeat;
+
+    @include bp(xl){
+      right: 3rem;
+    }
+
+    @include bp(lg){
+      display: none;
+    }
+  }
+
+  &__title{
+    font-size: 3.2rem;
+    letter-spacing: 0;
+    margin-bottom: 2.5rem;
+  }
+
+  &__logo{
+    margin: 0 10rem 0.2rem 0;
+
+    @include bp(xl){
+      margin-right: 3rem;
+    }
+
+    @include bp(lg){
+      margin: 0 0 3rem;
+    }
+  }
+
+  .btn{
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+
+    @include bp(sm){
+      padding-left: 4.5rem;
+      padding-right: 4.5rem;
+    }
+  }
+}
+
+// catalogue-section
+.catalogue-section{
+  padding-top: 0.6rem;
+
+  @include bp(sm){
+    margin-bottom: 6.2rem;
+  }
+
+  &__title{
+    @include bp(sm){
+      margin-bottom: 2.8rem;
+    }
+  }
+
+  &__text{
+    width: 44.8rem;
+    max-width: 100%;
+    flex-shrink: 0;
+    margin-top: 1.5rem;
+
+    @include bp(lg){
+      margin-top: 4rem;
+    }
+  }
+
+  &__link{
+    margin-top: 5.1rem;
+  }
+}
+
+.products{
+  &-group{
+    padding-top: 3.3rem;
+
+    @include bp(lg){
+      padding: 0;
+    }
+  }
+
+  &-slider{
+    overflow: visible;
+    padding: 1.3rem 0 0.4rem;
+
+    @include bp(xl){
+      padding: 0;
+    }
+
+    @include bp(lg){
+      padding-right: 10%;
+    }
+
+    @include bp(sm){
+      padding-right: 5%;
+      margin-bottom: 1.7rem;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      right: 100%;
+      top: -8rem;
+      bottom: 0;
+      background: $light;
+      z-index: 3;
+    }
+
+    .product-item{
+      flex-grow: 1;
+
+      @include bp(sm){
+        padding: 1rem 1rem 1.8rem;
+
+        .circle{
+          margin: 0.3rem 0 0;
+        }
+
+        .product-item__image{
+          margin-bottom: 1.2rem;
+        }
+      }
+    }
+
+    .swiper-slide{
+      height: auto;
+      display: flex;
+    }
+  }
+}
+
+.product-item {
+  display: block;
+  padding: 2rem 2rem 3.1rem;
+  background: #fff;
+  transition: all 0.3s ease-out;
+
+  @include bp(hv){
+    &:hover{
+      transform: translateY(-8rem);
+    }
+  }
+
+  @include bp(sm){
+    padding: 1.2rem 1.2rem 1.8rem;
+    margin-bottom: 1.6rem;
+  }
+
+  &__image {
+    margin-bottom: 2.4rem;
+
+    @include bp(sm){
+      margin-bottom: 1.1rem;
+    }
+  }
+
+  &__name {
+    font-size: 3.2rem;
+    letter-spacing: 0;
+    margin-bottom: 1.5rem;
+
+    @include bp(lg){
+      font-size: 2rem;
+    }
+
+    @include bp(sm){
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__info {
+    color: $primary;
+
+    @include bp(sm){
+      font-size: 1.4rem;
+      letter-spacing: -0.098rem;
+    }
+  }
+
+  .circle{
+    margin: 0.8rem 0 0 2rem;
+    flex-shrink: 0;
+
+    @include bp(lg){
+      margin-left: 1rem;
+    }
+
+    @include bp(sm){
+      margin-top: 0.4rem;
+    }
+  }
+
+  .icon-arrow{
+    @include bp(sm){
+      width: 1.7rem;
+      height: 1.6rem;
+
+      &:before{
+        background-image: url(../img/icons/arrow-m.svg);
+      }
+      &:after{
+        background-image: url(../img/icons/arrow-m-inversion.svg);
+      }
+    }
+  }
+}
+
+// blog
+.blog{
+  &-section{
+    background: #fff;
+    padding: 10.1rem 10rem 6.6rem;
+    display: grid;
+    grid-template-columns: 34.8% auto;
+    grid-gap: 0 3rem;
+
+    @include bp(xxxl){
+      padding: 5rem;
+    }
+
+    @include bp(xl){
+      display: block;
+    }
+
+    @include bp(md){
+      padding: 3rem;
+    }
+
+    @include bp(sm){
+      margin-left: -1.6rem;
+      margin-right: -1.6rem;
+      padding: 3.6rem 2.4rem;
+    }
+
+    .title{
+      @include bp(xl){
+        margin-bottom: 3rem;
+      }
+
+      @include bp(sm){
+        margin-bottom: 3.6rem;
+      }
+    }
+  }
+
+  &-slider{
+    @include bp(sm){
+      margin-right: -2.4rem;
+      padding-right: 17%;
+      padding-top: 0.1rem;
+    }
+
+    .swiper-wrapper{
+      @include bp(md-up){
+        flex-direction: column;
+      }
+    }
+  }
+
+  &-item {
+    margin-bottom: 5.3rem;
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-gap: 0 5.1rem;
+
+    @include bp(xxxl){
+      grid-gap: 0 3rem;
+    }
+
+    @include bp(sm){
+      grid-template-columns: 100%;
+      grid-gap: 2.1rem;
+    }
+
+    &__image {
+      @include bp(hv){
+        &:hover{
+          transform: rotate(-5deg);
+        }
+      }
+
+      img{
+        @include bp(sm){
+          width: 100%;
+        }
+      }
+    }
+
+    &__content {
+    }
+
+    &__name {
+      font-weight: 400;
+      margin-bottom: 2.2rem;
+
+      @include bp(xxxl){
+        margin-bottom: 1rem;
+      }
+
+      @include bp(sm){
+        margin-bottom: 0.8rem;
+      }
+    }
+
+    &__date {
+      @include bp(xxxl){
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.tab-nav{
+  padding-top: 3.3rem;
+
+  @include bp(xxxl){
+    padding-left: 3rem;
+  }
+
+  @include bp(xl){
+    padding-top: 0;
+    padding-bottom: 2rem;
+  }
+
+  @include bp(lg){
+    padding-left: 0;
+  }
+
+  @include bp(sm){
+    padding-bottom: 1.6rem;
+  }
+
+  &__item{
+    margin-bottom: 2.3rem;
+
+    @include bp(sm){
+      margin-bottom: 1.7rem;
+    }
+  }
+
+  &__link{
+    opacity: 0.3;
+    position: relative;
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 2.9rem;
+      height: 1.4rem;
+      background: url(../img/icons/dots.svg) 0 0 no-repeat;
+      background-size: contain;
+      top: 0;
+      bottom: 0;
+      right: 100%;
+      margin: auto 2.1rem auto 0;
+      opacity: 0;
+      transition: all 0.3s ease-out;
+
+      @include bp(md){
+        display: none;
+      }
+    }
+
+    &.active{
+      opacity: 1;
+      color: $primary;
+
+      &::before{
+        opacity: 1;
+      }
+    }
+
+    @include bp(hv){
+      &:hover{
+        opacity: 1;
+        color: $primary;
+      }
+    }
+  }
+}
+
+.amount{
+  font-size: 2rem;
+  margin: 0.8rem 0 0 1.9rem;
+  display: inline-block;
+  vertical-align: top;
+
+  @include bp(sm){
+    font-size: 1.4rem;
+    margin: -0.1rem 0 0 1rem;
+  }
+}
+
+.btn-more{
+  padding: 3.4rem 0 0 7.3rem;
+
+  @include bp(lg){
+    padding: 0;
+  }
+
+  @include bp(sm){
+    text-align: center;
+    margin: -1.8rem 0 1.2rem;
+  }
+}
+
+// subscription
+.subscription-section {
+  padding: 5rem 10rem 5.2rem;
+  display: grid;
+  grid-template-columns: 28.4% auto;
+  grid-gap: 0 2rem;
+
+  @include bp(xxxl){
+    padding: 5rem;
+  }
+
+  @include bp(xl){
+    grid-template-columns: 35% auto;
+  }
+
+  @include bp(lg){
+    display: block;
+    padding: 3rem;
+  }
+
+  @include bp(sm){
+    margin: 0 -1.6rem;
+    padding: 5.7rem 2.4rem 4.8rem;
+  }
+
+  &__title{
+    @include bp(lg){
+      margin-bottom: 3rem;
+    }
+
+    @include bp(sm){
+      font-size: 3.2rem;
+      margin-bottom: 1.3rem;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: 52.7% auto;
+    grid-gap: 0 12.3%;
+    align-self: center;
+    padding-right: 10.8%;
+    margin-top: 0.1rem;
+
+    @include bp(xl){
+      padding: 0;
+      grid-gap: 0 3rem;
+    }
+
+    @include bp(sm){
+      grid-template-columns: 100%;
+      grid-gap: 3.2rem;
+    }
+  }
+}
+
+// faq
+.faq{
+  &-section{
+    display: grid;
+    grid-template-columns: 28.5% auto;
+    grid-gap: 3rem;
+
+    @include bp(xl){
+      grid-template-columns: 30% auto;
+    }
+
+    @include bp(sm){
+      margin: -0.5rem 0 6rem;
+      grid-template-columns: 100%;
+    }
+
+    &__content{
+      margin: -0.4rem 3.6rem 0 -0.1rem;
+
+      @include bp(sm){
+        margin: -0.3rem 0 0;
+      }
+    }
+
+    &__footer{
+      margin-top: 4rem;
+
+      @include bp(sm){
+        margin-top: 3.3rem;
+      }
+
+      .text_size-lg{
+        letter-spacing: -0.168rem;
+
+        @include bp(sm){
+          font-size: 1.5rem;
+          letter-spacing: -0.105rem;
+          margin: 0;
+        }
+      }
+
+      .btn{
+        @include bp(lg){
+          margin-top: 2.4rem;
+        }
+
+        @include bp(sm){
+          font-size: 1.8rem;
+          padding-top: 1.6rem;
+          padding-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+
+  &-item{
+    margin-bottom: 2rem;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid rgba($primary, 0.2);
+
+    @include bp(sm){
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    &__title{
+      position: relative;
+      padding-right: 5rem;
+      display: flex;
+
+      @include bp(sm){
+        font-size: 1.8rem;
+        letter-spacing: -0.126rem;
+        padding-right: 4rem;
+      }
+
+      &.active{
+        &::after{
+          transform: none;
+        }
+      }
+
+      &:before, &:after{
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 2.3rem;
+        width: 3rem;
+        height: 0.2rem;
+        background: #012A49;
+        transition: all 0.3s ease-out;
+
+        @include bp(sm){
+          width: 2.4rem;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+      }
+
+      &:after{
+        transform: rotate(90deg);
+      }
+    }
+
+    &__body{
+      padding-top: 1.5rem;
+    }
+  }
+}

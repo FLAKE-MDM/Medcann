@@ -1,10 +1,11 @@
 a{
     transition: all 0.3s ease-out;
     text-decoration: none;
-    
+    color: $primary;
+
     &:not(.btn):active{
         text-decoration: none !important;
-        color: inherit !important;
+        color: #0043AB !important;
         background-color: transparent !important;
         outline: none !important;
         -webkit-tap-highlight-color: transparent !important;
@@ -13,7 +14,11 @@ a{
 
     @include bp(hv){
         &:hover{
-            
+            color: #0043AB;
+
+            &.text_light{
+                color: $light;
+            }
         }
     }
 }
@@ -30,54 +35,150 @@ p{
     margin-bottom: 1.6rem;
 }
 .title{
-    &_main{
-        font: 400 7.2rem/1.2 Tahoma, sans-serif;
-    }
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 0;
+
     &_size{
         &-xs{
-            
+            font-size: 3.6rem;
+            letter-spacing: -0.252rem;
+            line-height: 1.04;
+
+            @include bp(lg){
+                font-size: 2.8rem;
+            }
+
+            @include bp(sm){
+                font-size: 1.8rem;
+                letter-spacing: -0.126rem;
+            }
         }
         &-sm{
-            
+            font-size: 4rem;
+            line-height: 1.04;
+
+            @include bp(lg){
+                font-size: 3.2rem;
+            }
+
+            @include bp(sm){
+                font-size: 2.4rem;
+            }
         }
         &-md{
-            
+            font-size: 6rem;
+            line-height: 116.667%;
+
+            @include bp(lg){
+                font-size: 4rem;
+            }
+
+            @include bp(sm){
+                font-size: 3.2rem;
+                line-height: 104%;
+            }
         }
         &-lg{
-            
+            font-size: 9rem;
         }
         &-xl{
-            
+            font-size: 14rem;
+            line-height: 1.04;
+
+            @include bp(xxxl){
+                font-size: 12rem;
+            }
+
+            @include bp(xxl){
+                font-size: 10rem;
+            }
+
+            @include bp(md){
+                font-size: 8rem;
+            }
+
+            @include bp(sm){
+                font-size: 4.8rem;
+            }
         }
     }
 
 }
 .text{
-    &_upper{
-        text-transform: uppercase;
-    }
     // size
     &_size{
         &-xs{
-            
+            font-size: 1.4rem;
+            line-height: 171.429%;
+            letter-spacing: -0.098rem;
         }
         &-sm{
-            
+            font-size: 1.6rem;
+            line-height: normal;
+            letter-spacing: -0.112rem;
         }
         &-md{
-            
+            font-size: 1.8rem;
+            line-height: 133.333%;
+            letter-spacing: -0.126rem;
         }
         &-lg{
-            
+            font-size: 2.4rem;
+            line-height: 116.667%;
+            letter-spacing: 0;
+
+            @include bp(xl){
+                font-size: 2.2rem;
+            }
         }
         &-xl{
-            
+            font-size: 2.8rem;
+            line-height: 142.857%;
+            letter-spacing: -0.196rem;
+
+            @include bp(sm){
+                font-size: 2.2rem;
+                line-height: 1.23;
+                letter-spacing: -0.154rem;
+            }
+        }
+        &-xxl{
+            font-size: 3.6rem;
+            letter-spacing: -0.252rem;
+
+            @include bp(lg){
+                font-size: 3rem;
+            }
+
+            @include bp(md){
+                font-size: 2.8rem;
+            }
+
+            @include bp(sm){
+                font-size: 2.2rem;
+                letter-spacing: -0.154rem;
+                line-height: 1.22;
+            }
         }
     }
     // colors
     &_primary{
 
     }
+
+    &_inversion{
+        color: #fff;
+    }
+
+    &_light{
+        color: $light;
+    }
+
+    &_dark{
+        color: $dark;
+    }
+
     // weight
     &_normal{
         font-weight: 400;
@@ -88,6 +189,7 @@ p{
     &_bold{
         font-weight: 700;
     }
+
     // alignment
     &_center{
         text-align: center;
@@ -99,9 +201,34 @@ p{
     }
     &_left{
         text-align: left!important;
+
+        &-sm{
+            @include bp(sm){
+                text-align: left!important;
+            }
+        }
     }
     &_right{
         text-align: right!important;
+    }
+
+    // other
+    &_styling{
+        font-family: 'Neutral Face';
+    }
+
+    &_bg{
+        white-space: nowrap;
+        background: #AED7F5;
+        padding: 0 0.3rem;
+
+        @include bp(sm){
+            padding: 0;
+        }
+    }
+
+    &_upper{
+        text-transform: uppercase;
     }
 }
 

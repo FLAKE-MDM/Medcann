@@ -4,6 +4,7 @@
 @import 'mixin';
 @import 'variables';
 @import 'vendor';
+@import 'grid';
 @import 'icons';
 @import 'buttons';
 @import 'typography';
@@ -14,38 +15,76 @@
 
 
 body{
-    font: 400 2.1rem/3.4rem Arial, sans-serif;
+    font: 400 2rem/normal 'Inter', sans-serif;
     font-variant-numeric: lining-nums;
-    color: #000;
-    background: #fff;
+    color: $primary;
+    background: $light;
+    letter-spacing: -0.14rem;
 
-    @include bp(md){
-
-    }
     @include bp(sm){
-
+        font-size: 1.8rem;
+        line-height: normal;
+        letter-spacing: -0.126rem;
     }
 
     &.overflow-none{
         overflow: hidden;
+
         @include bp(xl-up){
             padding-right: 1.7rem;
-            .header{
-                margin-right: 1.7rem;
+
+            .header, .header__collapse, .product-pane{
+                padding-right: 1.7rem;
             }
         }
     }
 }
+
 .wrap{
     overflow: hidden;
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 10.4rem;
+
+    @include bp(md){
+        padding-top: 8.6rem;
+    }
+
+    @include bp(sm){
+        padding-top: 5.9rem;
+    }
+
+    &_padding{
+        @include bp(lg-up){
+            padding-top: 7.9rem;
+        }
+    }
+}
+
+.content{
+    padding-bottom: 14rem;
+
+    @include bp(sm){
+        padding-bottom: 0;
+    }
+
+    &_padding{
+        padding: 5.5rem 0 12rem;
+
+        @include bp(sm){
+            padding: 3rem 0 12rem;
+        }
+    }
+
+    &_padding-md{
+        padding: 6.5rem 0 12rem;
+    }
 }
 
 .container{
-    padding-left: 1.6rem;
-    padding-right: 1.6rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     margin: 0 auto;
     width: 100%;
 
@@ -62,7 +101,20 @@ body{
     }
 
     @include bp(xxl-up){
-        max-width: 1208px;
+        max-width: 1380px;
+    }
+
+    @include bp(xxxl-up){
+        max-width: 1570px;
+    }
+
+    @include bp(xxxxl-up){
+        max-width: 1786px;
+    }
+
+    @include bp(sm){
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
     }
 }
 
@@ -98,7 +150,15 @@ body{
 }
 .bg{
     &_primary{
+        background: $primary;
+    }
 
+    &_secondary{
+        background: $secondary;
+    }
+
+    &_white{
+        background: #fff;
     }
 }
 .w-100{
@@ -226,11 +286,69 @@ body{
     }
 }
 
+// link
+.link{
+    @include bp(sm){
+        font-size: 2rem;
+    }
+}
+.circle{
+    width: 9.1rem;
+    height: 9.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $primary;
+    transition: all 0.3s ease-out;
+    border-radius: 50%;
+    margin-bottom: 0.4rem;
+
+    @include bp(sm){
+        width: 6rem;
+        height: 6rem;
+        margin-bottom: 0;
+    }
+
+    @include bp(hv){
+        a:hover &{
+            background: $secondary;
+            border-color: $secondary;
+        }
+    }
+
+    &_inversion{
+        border-color: $light;
+        padding: 0.3rem 0 0 0.2rem;
+    }
+
+    &_md{
+        width: 6.9rem;
+        height: 6.9rem;
+
+        @include bp(lg){
+            width: 5rem;
+            height: 5rem;
+        }
+
+        @include bp(sm){
+            width: 4.6rem;
+            height: 4.6rem;
+        }
+
+        .icon{
+            @include bp(lg){
+                width: 2rem;
+            }
+        }
+    }
+}
 
 @import 'form';
 @import 'header';
 @import 'home';
-// @import 'footer';
+@import 'footer';
+@import 'catalogue';
+@import 'product';
 
 
 

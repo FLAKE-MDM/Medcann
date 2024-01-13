@@ -1,38 +1,242 @@
 .footer{
-    padding: 5.2rem 0 4.7rem;
     margin-top: auto;
-    @include bp(md){
-        padding: 2.4rem 0 1rem;
-    }
-    &__logo{
-        width: 10.2rem;
-        margin-right: 4.2%;
-    }
-    &-nav{
-        .nav-list__item{
-            margin-right: 3.35rem;
-            padding: 1.2rem 0;
+    background: #fff;
+
+    &-top{
+        border-bottom: 1px solid rgba($primary, 0.1);
+        margin-bottom: 11.8rem;
+
+        @include bp(lg){
+            margin-bottom: 6rem;
         }
-        .circle-arrow{
-            top: -0.1rem;
-        }
-    }
-    &__phone{
-        margin: 0.5rem 0 0;
+
         @include bp(sm){
-            align-items: center;
-            margin: 0;
-            display: inline-flex;
+            margin: 0 2.4rem;
         }
-        .icon{
-            margin-right: 1.7rem;
+
+        .container{
             @include bp(sm){
-                margin-right: 1.2rem;
+                padding: 0;
+            }
+        }
+
+        &__content{
+            grid-template-columns: 70% auto;
+            padding: 2.8rem 5.65% 3.3rem 3.8%;
+
+            @include bp(xl){
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            @include bp(lg){
+                grid-template-columns: 65% auto;
+            }
+
+            @include bp(sm){
+                padding: 4.4rem 0 3.2rem;
+            }
+        }
+
+        .btn{
+            margin-top: 0.4rem;
+        }
+    }
+
+    &__content{
+        display: grid;
+        grid-template-columns: 69.7% 23.2%;
+        justify-content: space-between;
+        padding: 0 5.7%;
+
+        @include bp(xl){
+            padding: 0;
+        }
+
+        @include bp(md){
+            display: block;
+        }
+
+        @include bp(sm){
+            padding: 0 0.8rem;
+        }
+    }
+
+    &__links{
+        display: grid;
+        grid-template-columns: repeat(3, 30%);
+
+        @include bp(md){
+            margin-bottom: 4rem;
+            justify-content: space-between;
+        }
+
+        @include bp(sm){
+            grid-template-columns: 100%;
+        }
+    }
+
+    &__col{
+        @include bp(sm){
+            border-bottom: 1px solid rgba($primary, 0.1);
+        }
+    }
+
+    &__title{
+        margin-bottom: 3.1rem;
+
+        @include bp(md-up){
+            pointer-events: none;
+        }
+
+        @include bp(sm){
+            display: flex;
+            padding: 1.9rem 4rem 1.7rem 0;
+            position: relative;
+            margin: 0;
+            font-size: 2.4rem;
+        }
+
+        &:before, &:after{
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 2rem;
+            height: 0.2rem;
+            background: #012A49;
+            transition: all 0.3s ease-out;
+
+            @include bp(md-up){
+                display: none;
+            }
+        }
+
+        &:after{
+            transform: rotate(90deg);
+        }
+
+        &.active{
+            &:after{
+                transform: none;
             }
         }
     }
+
+    &__phone{
+        margin-bottom: 3.1rem;
+
+        @include bp(sm){
+            font-size: 2.4rem;
+            margin-bottom: 2.4rem;
+        }
+    }
+
+    &-nav{
+        @include bp(sm){
+            padding: 0.6rem 0 1rem;
+        }
+
+        &__item{
+            margin-bottom: 1.2rem;
+        }
+    }
+
     &__social-list{
-        margin: 0.3rem 0 0 4rem;
+        padding: 3.4rem 0 0 0.4rem;
+
+        @include bp(sm){
+            padding-top: 1.1rem;
+        }
+    }
+
+    &-bottom{
+        padding: 0 5.7% 2.8rem;
+        margin-top: 11.4rem;
+
+        @include bp(xl){
+            padding-left: 0;
+            padding-right: 0;
+        }
+
+        @include bp(lg){
+            margin-top: 6rem;
+        }
+
+        @include bp(sm){
+            padding: 0 0.8rem 4rem;
+            margin-top: 3.6rem;
+        }
+    }
+
+    &__payment-list{
+        align-self: flex-start;
+        margin-right: 2.8%;
     }
 }
 
+.logos-slider{
+    @include bp(lg){
+      padding-right: 8%;
+    }
+
+    @include bp(md){
+        padding-right: 15%;
+    }
+
+    @include bp(sm){
+        margin: 0 -2.4rem 3.7rem -1rem;
+        padding-right: 31%;
+    }
+
+    .swiper-slide{
+        height: auto;
+
+        @include bp(sm){
+            padding: 0 1rem;
+        }
+    }
+}
+
+.social-list{
+    &__item{
+        &:not(:last-child){
+            margin-right: 4.25rem;
+        }
+    }
+
+    &__link{
+        @include bp(hv){
+            &:hover{
+                opacity: 0.6;
+            }
+        }
+
+        &:active{
+            opacity: 0.6;
+        }
+    }
+}
+
+.copyright{
+    color: #B3BFC8;
+}
+
+.payment-list{
+    @include bp(md){
+        margin-top: 2rem;
+    }
+
+    @include bp(sm){
+        margin-top: 2.4rem;
+    }
+
+    &__item{
+        &:not(:last-child){
+            margin-right: 4rem;
+        }
+    }
+}
