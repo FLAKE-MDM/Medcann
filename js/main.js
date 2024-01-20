@@ -4,6 +4,24 @@ $('.toggler').click(function(e){
   $(this).toggleClass('active');
 });
 
+// preloader
+let loaderText = document.querySelector('.loader__text');
+let progress = 0;
+
+if(loaderText){
+  let interval = setInterval(function() {
+    progress += 1;
+    loaderText.innerText = progress + '%';
+
+    if (progress === 100) {
+      clearInterval(interval);
+      // $('.loader').addClass('hide')
+    }
+  }, 20);
+}
+
+
+
 Fancybox.bind("[data-fancybox]", {});
 
 // pane
@@ -183,6 +201,16 @@ function checkResolution() {
       loop: true,
     });
   }
+
+  if (window.innerWidth < 992) {
+    $('.category-block').click(function(e){
+      if(!$(this).hasClass('active')){
+        e.preventDefault();
+        $(this).addClass('active');
+        $(this).find('.category-block__image').slideDown(300);
+      }
+    });
+  }
 }
 
 window.addEventListener('load', checkResolution);
@@ -287,271 +315,46 @@ new Swiper(".product-slider", {
   },
 });
 
-// new Swiper(".preview-slider", {
-//   slidesPerView: 1,
-//   loop: true,
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
+//date
+$( ".form-control_date" ).change( 'blur', function(){
+  if($(this).val()){
+    $(this).parent('.input').addClass('input--filled');
+  }
+})
+$("#birthday").datepicker($.datepicker.regional["ru"]);
+$("#birthday").datepicker("option", "dateFormat", "d MM y");
 
-// new Swiper(".product-slider", {
-//   slidesPerView: 1,
-//   spaceBetween: 16,
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 30,
-//     },
-//     1200: {
-//       slidesPerView: 3,
-//       spaceBetween: 30,
-//     },
-//   },
-// });
+$('.order-item__link').click(function(){
+  $(this).parents('.order-item').toggleClass('active')
+})
 
-// window.onscroll = function checkScroll() {
-//   if (document.documentElement.scrollTop < 1){
-//     $('.header__info').show(300);
-//     $('.header').removeClass('header_fixed');
-//   } else {
-//     $('.header__info').hide(300);
-//     $('.header').addClass('header_fixed');
-//   }
-// };
+// map
+google.maps.event.addDomListener(window, 'load', init);
 
-// new Swiper(".catalogue-slider", {
-//   slidesPerView: 2,
-//   spaceBetween: 11,
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 3,
-//       spaceBetween: 10,
-//     },
-//     1200: {
-//       slidesPerView: 4,
-//       spaceBetween: 10,
-//     },
-//     1400: {
-//       slidesPerView: 5,
-//       spaceBetween: 24,
-//     },
-//   },
-// });
+function init() {
+  var mapOptions = {
+      zoom: 12,
 
-// // pane
-// $('.pane-open').click(function(e){
-//   e.preventDefault();
-//   $('body').addClass('overflow-none');
-//   $('.pane').removeClass('show');
-//   $($(this).attr('href')).addClass('show');
-//   if($(this).attr('href') == '#nav'){
-//     $('.pane-close__link-nav').addClass('show');
-//   } else{
-//     $('.pane-close__link').addClass('show');
-//   }
-// })
-// $('.pane-close').click(function(e){
-//   e.preventDefault();
-//   $('body').removeClass('overflow-none');
-//   $('.pane').removeClass('show');
-//   $('.pane-close__link, .pane-close__link-nav').removeClass('show');
-// });
+      center: new google.maps.LatLng(55.762315958749454, 37.58558162154966),
 
-// let loginForm = document.querySelector("#form-phone");
+      styles: [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]
+  };
 
-// loginForm.addEventListener("submit", function(e){
-//   e.preventDefault();
+  var mapElement = document.getElementById('map');
+  var map = new google.maps.Map(mapElement, mapOptions);
 
-//   let phone = document.querySelector("#phone");
-//   let errorMess = document.querySelector("#phoneError");
-
-//   if(phone.value == ""){
-//     $(errorMess).removeClass("collapse");
-//     errorMess.textContent = "Заполните поле"
-//     $(phone).addClass("has-error");
-//   } else if((phone.value.length != 10)){
-//     $(errorMess).removeClass("collapse");
-//     errorMess.textContent = "Неверный формат"
-//     $(phone).addClass("has-error");
-//     console.log();
-//   } else{
-//     $('.pane').removeClass('show');
-//     $('body').addClass('overflow-none');
-//     $('.pane').removeClass('show');
-//     $("#code-pane").addClass('show');
-//   }
-// })
-
-// let codeGroupInputs = document.querySelectorAll("#code-group input")
-
-// for(let i = 0; i < codeGroupInputs.length; i++){
-//   codeGroupInputs[i].addEventListener("input", function(){
-//     if(codeGroupInputs[i].value != ""){
-//       codeGroupInputs[i+1].focus()
-//     }
-//   })
-// }
-
-// $(".pass-view").click(function(e){
-//   e.preventDefault();
-//   let inputPass = document.querySelector("#pass");;
-//   if (inputPass.type == "password"){
-//     inputPass.type = "text"
-//   } else{
-//     inputPass.type = "password"
-//   }
-// })
-
-
-// // catalogue
-// $( function() {
-//   $( "#price-range" ).slider({
-//     range: true,
-//     min: 2900,
-//     max: 60000,
-//     values: [ 2900, 33900 ],
-//     slide: function( event, ui ) {
-//       $( "#price-min" ).val(ui.values[ 0 ] );
-//       $( "#price-max" ).val(ui.values[ 1 ] );
-//     }
-//   });
-//   $( "#price-min" ).val($( "#price-range" ).slider( "values", 0 ));
-//     $( "#price-max" ).val($( "#price-range" ).slider( "values", 1 ) );
-// });
-// $('.tag-del').click(function(){
-//   $(this).parent().remove()
-// })
-
-// // item
-// new Swiper(".product-item-slider", {
-//   loop: true,
-//   slidesPerView: 1,
-//   thumbs: {
-//     swiper: {
-//       el: ".product-item-thumbs",
-//       slidesPerView: 4,
-//       spaceBetween: 16,
-//       breakpoints: {
-//         "@0.00": {
-//           slidesPerView: 4,
-//         },
-//         992: {
-//           slidesPerView: 5,
-//           spaceBetween: 16,
-//           direction: "vertical",
-//         },
-//         1200: {
-//           slidesPerView: 6,
-//           spaceBetween: 16,
-//           direction: "vertical",
-//         },
-//       },
-//     },
-//   },
-// });
-
-// new Swiper(".tab-nav-slider", {
-//   slidesPerView: "auto",
-//   spaceBetween: 47,
-//   freeMode: true,
-// });
-
-// // order
-// $('.radio-list__item').click(function(){
-//   $(this).parent().find('.radio-list__item').removeClass('active');
-//   $(this).addClass('active');
-// })
-
-// // // input number
-// jQuery(($) => {
-//   $(document).on('click', '.input-number__minus', function () {
-//       let total = $(this).next();
-//       if (total.val() > 1) {
-//           total.val(+total.val() - 1);
-//       } else{
-//         $(this).parents().find('.btn-add').removeClass('collapse');
-//         $(this).parents('.fake-btn').addClass('collapse');
-//       }
-//   });
-//   $(document).on('click', '.input-number__plus', function () {
-//       let total = $(this).prev();
-//       total.val(+total.val() + 1);
-//   });
-//   document.querySelectorAll('.input-number__input').forEach(function (el) {
-//       el.addEventListener('input', function () {
-//           this.value = this.value.replace(/[^\d]/g, '');
-//       });
-//   });
-// });
-
-// // certificates
-// new Swiper(".certificates-slider", {
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-// });
-
-// new Swiper(".tab-nav-slider__margin-md", {
-//   slidesPerView: "auto",
-//   spaceBetween: 24,
-//   freeMode: true,
-//   breakpoints: {
-//     992: {
-//       spaceBetween: 47,
-//     },
-//   },
-// });
-
-// // calculator
-// // fake-select
-// $('.fake-select__item').click(function(){
-//   $(this).parents(".fake-select").find('.fake-select__item').removeClass('fake-select__item_active active');
-//   $(this).addClass('fake-select__item_active');
-//   $(this).parents('.fake-select').find('.fake-select__value').html(this.innerHTML)
-//   $(this).parents('.fake-select').find('.fake-select__link').addClass('active');
-// });
-
-// $( function() {
-//   $( "#weight-range" ).slider({
-//     range: "max",
-//     min: 1,
-//     max: 200,
-//     value: 89,
-//     slide: function( event, ui ) {
-//       $( "#weight-range-value" ).val( ui.value );
-//     }
-//   });
-//   $( "#weight-range-value" ).val( $( "#weight-range" ).slider( "value" ) );
-// } );
-
-// $(".tab-nav-btn__label").click(function(){
-//   $(this).parents(".tab-nav-btn").find(".tab-nav-btn__label").removeClass("active");
-//   $(this).addClass("active");
-// })
-
-// // profile
-// // // datepicker
-// $( "#birthday" ).datepicker( $.datepicker.regional[ "ru" ] );
-// $( "#birthday" ).datepicker( "option", "dateFormat", "d MM y" );
-
-// $("#add-address").click(function(e){
-//   e.preventDefault();
-//   let addressGroup = document.querySelector("#address-group");
-
-//   addressGroup.insertAdjacentHTML("beforeend", '<div class="form-group_margin-sm address-item pos-rel"><input type="email" class="form-control form-control_lg"  placeholder="Введите адрес"></div>')
-// })
-
-// $(".address-item__link").click(function(e){
-//   e.preventDefault();
-//   $(this).parent().find(".form-control").removeAttr("disabled")
-//   this.style.display = "none"
-// })
-
-// $(".history-item__link").click(function(e){
-//   e.preventDefault();
-//   $(this).parent().toggleClass("active")
-// })
+  var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(55.751926759398245, 37.53823495349505),
+        map: map,
+        title: 'Гучжень',
+        icon: 'img/icons/map.svg'
+  });
+  var infowindow = new google.maps.InfoWindow({
+      content: contentString,
+      maxWidth: 400
+  });
+  marker.addListener('click', function() {
+      infowindow.open(map, marker);
+  });
+}
 

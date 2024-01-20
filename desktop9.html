@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medcann</title>
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+    <div class="wrap">
+        <div class="collapse-close"></div>
+        <!-- header -->
+        <header class="header">
+            <div class="container">
+                <div class="d-flex align-items-center">
+                    <a href="index.html" class="logo header__logo"><img src="img/logo.svg" alt="" class="img-fluid"></a>
+                    <nav class="nav d-none d-lg-block">
+                        <ul class="nav-list d-flex">
+                            <li class="nav-list__item"><a href="#" class="nav-list__link">Главная</a></li>
+                            <li class="nav-list__item"><a href="#" class="nav-list__link">Продукция</a></li>
+                            <li class="nav-list__item"><a href="#" class="nav-list__link">Категории</a></li>
+                            <li class="nav-list__item"><a href="#" class="nav-list__link">О нас</a></li>
+                            <li class="nav-list__item"><a href="#" class="nav-list__link">Блог</a></li>
+                            <li class="nav-list__item"><a href="#" class="nav-list__link">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <a href="tel:88005501982" class="header_phone phone text_mediumbold d-none d-xxxl-block">8 (800) 550-19-82</a>
+                    <a href="#callback" class="btn btn_outline btn_size-sm d-none d-md-inline-flex header-collapse">Написать нам</a>
+                    <a href="#navigation" class="btn-menu header-collapse">
+                        <div class="btn-menu__item"></div>
+                        <div class="btn-menu__item"></div>
+                        <div class="btn-menu__item"></div>
+                    </a>
+                </div>
+            </div>
+            <!-- navigation -->
+            <div class="collapse header__collapse navigation" id="navigation">
+                <div class="container">
+                    <div class="navigation__content">
+                        <ul class="navigation-list text_size-xxl">
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Главная</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link active">Продукция</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Категории</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">О нас</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Блог</a></li>
+                            <li class="navigation-list__item"><a href="#" class="navigation-list__link">Контакты</a></li>
+                            <li class="navigation-list__item d-md-none"><a href="#callback" class="navigation-list__link header-collapse">Написать нам</a></li>
+                        </ul>
+                        <div class="navigation__text">
+                            <p class="text_size-xl">Горячая линия по вопросам заказа и доставки
+                                <br class="d-none d-xxxl-block">продукции:</p>
+                            <a href="tel:88005501982" class="navigation__phone title_size-md text_styling d-inline-flex">8 (800) 550-19-82</a>
+                            <div class="d-flex navigation__buttons">
+                                <a href="#" class="btn btn_secondary me-2 btn_size-xl w-100_sm">Войти в личный кабинет</a>
+                                <a href="#" class="btn btn_outline btn_size-xl w-100_sm">Зарегистрироваться</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /navigation -->
+            <!-- callback -->
+            <div class="collapse header__collapse callback" id="callback">
+                <div class="container">
+                    <div class="collapse-close callback__close d-md-none"></div>
+                    <div class="callback__content">
+                        <div class="title text_styling title_size-md">написать <br class="d-md-none d-xxxl-block">нам</div>
+                        <div class="callback__text">
+                            <p class="text_size-xl">По запросу предоставляем образцы
+                            <br class="d-none d-xxxl-block">для испытаний и анализа</p>
+                            <div class="callback__form">
+                                <form action="#" class="d-flex flex-column">
+                                    <div class="input form-group pos-rel">
+                                        <input class="input__field form-control" type="text" id="name">
+                                        <label class="input__label input__label--juro" for="name">
+                                            <span class="input__label-content input__label-content--juro">Имя или организация</span>
+                                        </label>
+                                    </div>
+                                    <div class="d-md-grid grid-2 grid-lg">
+                                        <div class="input form-group_md pos-rel">
+                                            <input class="input__field form-control" type="tel" id="phone" value="+7">
+                                            <label class="input__label input__label--juro" for="phone">
+                                                <span class="input__label-content input__label-content--juro">Номер телефона</span>
+                                            </label>
+                                        </div>
+                                        <div class="input form-group_md pos-rel">
+                                            <input class="input__field form-control" type="email" id="email">
+                                            <label class="input__label input__label--juro" for="email">
+                                                <span class="input__label-content input__label-content--juro">Электронная почта</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="input form-group_md pos-rel">
+                                        <input class="input__field form-control" type="text" id="message">
+                                        <label class="input__label input__label--juro" for="message">
+                                            <span class="input__label-content input__label-content--juro">Текст обращения</span>
+                                        </label>
+                                    </div>
+                                    <div class="text_size-md callback__form-text">Нажимая  «Отправить заявку» вы соглашаетесь с обработкой персональных даннных</div>
+                                    <a href="#" class="btn btn_secondary btn_size-xxl w-100_sm">Отправить заявку</a>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /callback -->
+        </header>
+        <!-- /header -->
+        <div class="content">
+            <div class="container">
+              <!-- about-preview -->
+              <div class="about-preview text_inversion">
+                <div class="about-preview__text">
+                  <h1 class="title text_styling title_size-lg about-preview__title"><span class="text_dark">Health&<wbr>Beauty</span><br> индустриЯ</h1>
+                  <p class="text_size-xxl">Medcann – это возможность создания линейки Hemp продукции на основе нашего сырья – наноэмульсий, микроэмульсии, масел и изолятов. </p>
+                </div>
+                <div class="about-preview__image"><img src="img/content/about.png" alt="" class="img-fluid"></div>
+                <div class="about-preview__group d-md-grid grid-md-2 justify-content-between">
+                  <div class="statistics-item">
+                    <div class="statistics-item__title text_dark text_styling mb-xs">2024</div>
+                    <p class="text_size-md">К 2024 году рынок средств по уходу за кожей на основе Hemp-экстрактов составит 10% от общей доли Health&Beauty</p>
+                  </div>
+                  <div class="statistics-item">
+                    <div class="statistics-item__title text_dark text_styling mb-xs">959 млн. +</div>
+                    <p class="text_size-md">Примерный рост рынка CBD продукции в секторе Health&Beauty</p>
+                  </div>
+                </div>
+
+              </div>
+              <!-- /about-preview -->
+              <!-- info-section -->
+              <section class="info-section mb-xl info-section_about">
+                <div class="info-section__content info-section__content_md">
+                  <h2 class="title title_size-md text_styling text_upper">СЫРЬЕ ДЛЯ КОСМЕТИКИ</h2>
+                  <div class="info-section__col">
+                    <div class="text_size-xxl"><p>Косметические продукты Hemp – это мировой тренд на рынке натуральных компонентов для создания эффективных косметических средств на водной и масляной основе. По прогнозам исследователей, к 2024 году рынок средств по уходу за кожей на основе Hemp-<br class="d-xs-none">экстрактов, <span class="text_bg">CBD вырастет до <wbr>959 миллионов долларов</span>, что составит 10% всей мировой индустрии красоты. И эти цифры вполне реальны, учитывая растущую популярность косметических продуктов, содержащих CBD.</p>
+                  </div>
+                </div>
+              </section>
+              <!-- /info-section -->
+              <!-- info-section -->
+              <section class="info-section mb-lg  info-section_about">
+                <div class="info-section__content info-section__content_sm">
+                  <h2 class="title title_size-md text_styling text_upper">ФАКТОРЫ РАЗВИТИЯ</h2>
+                  <div class="info-section__col">
+                    <div class="text_size-xxl mb-md">Позитивное развитие российского рынка органической косметики на основе Hemp-сырья в долгосрочной перспективе обусловлено влиянием следующих факторов:</div>
+                    <p class="text_size-lg mb-xsm">галопирующий рост спроса на косметические средства с содержанием Hemp в развитых странах в 2016-2020 гг. и прогнозируемая интенсивная положительная динамика в 2021-2025 гг;</p>
+                    <p class="text_size-lg mb-xsm">стремительно развивающийся спрос на уходовые средства для кожи на основе Hemp в странах Восточной Европы, потребительское поведение населения которых в значительной степени схоже с российским; популяризации ЗОЖ и повышение культуры отношения к экологии в целом среди граждан РФ;</p>
+                    <p class="text_size-lg mb-xsm">интенсивный рост рынка органической косметики и косметики на основе масел семян технической конопли в России;</p>
+                    <p class="text_size-lg mb-xsm">рост количества информированных о beauty-свойствах Hemp потребителей в РФ</p>
+                  </div>
+                </div>
+              </section>
+              <!-- /info-section -->
+              <!-- cases-section -->
+              <section class="cases-section mb-lg">
+                <h2 class="title title_size-xl text_styling mb-md cases-section__title">УСПЕШНЫЕ <br>КЕЙСЫ НА РЫНКЕ</h2>
+                <div class="cases-section__group">
+                  <div class="case-item mb-xsm">
+                    <div class="case-item__image order-md-2"><img src="img/content/case-1.jpg" alt="BABOR" class="w-100 d-block"></div>
+                    <div class="text_size-lg case-item__text flex-column d-flex align-items-start">
+                      <h3 class="case-item__title title text_styling mb-sm title_size-md text_upper"><a href="#">BABOR</a></h3>
+                      <p>Косметика с каннабидиолом — эксклюзив, который представляет не так много компаний, как хотелось бы. Babor – один из немногих брендов, который использует инновационную технологию по работе с КБД. История компании началась еще в далеком 1956 году. За все это время Babor успел стать известным брендом, который завоевал сердца миллионов покупателей. </p>
+                      <a href="#" class=" mt-auto"><div class="circle"><span class="icon icon-arrow icon_double"></span></div></a>
+                    </div>
+                  </div>
+                  <div class="case-item mb-xsm">
+                    <div class="case-item__image order-md-2"><img src="img/content/case-2.jpg" alt="Derma Quest" class="w-100 d-block"></div>
+                    <div class="text_size-lg case-item__text flex-column d-flex align-items-start">
+                      <h3 class="case-item__title title text_styling mb-sm title_size-md text_upper"><a href="#">Derma Quest</a></h3>
+                      <p>Косметика с каннабидиолом — эксклюзив, который представляет не так много компаний, как хотелось бы. Babor – один из немногих брендов, который использует инновационную технологию по работе с КБД. История компании началась еще в далеком 1956 году. За все это время Babor успел стать известным брендом, который завоевал сердца миллионов покупателей. </p>
+                      <a href="#" class=" mt-auto"><div class="circle"><span class="icon icon-arrow icon_double"></span></div></a>
+                    </div>
+                  </div>
+                  <div class="case-item mb-lg">
+                    <div class="case-item__image order-md-2"><img src="img/content/case-3.jpg" alt="kush queen" class="w-100 d-block"></div>
+                    <div class="text_size-lg case-item__text flex-column d-flex align-items-start">
+                      <h3 class="case-item__title title text_styling mb-sm title_size-md text_upper"><a href="#">kush queen</a></h3>
+                      <p>Косметика с каннабидиолом — эксклюзив, который представляет не так много компаний, как хотелось бы. Babor – один из немногих брендов, который использует инновационную технологию по работе с КБД. История компании началась еще в далеком 1956 году. За все это время Babor успел стать известным брендом, который завоевал сердца миллионов покупателей. </p>
+                      <a href="#" class=" mt-auto"><div class="circle"><span class="icon icon-arrow icon_double"></span></div></a>
+                    </div>
+                  </div>
+                  <div class="d-none d-md-flex justify-content-center">
+                    <a href="#" class="d-flex align-items-center">
+                      <div class="circle me-2"><span class="icon icon-arrow icon_double"></span></div>
+                      Показать больше
+                    </a>
+                  </div>
+                </div>
+              </section>
+              <!-- /cases-section -->
+              <!-- catalogue-section -->
+              <section class="catalogue-section mb-xl">
+                <div class="d-xl-flex justify-content-between mb-xxl catalogue-section__title">
+                    <h2 class="title title_size-xl text_styling">
+                      <span class="d-none d-xxl-inline">ВЫПУСКАЕМЫЕ </span>
+                      <span class="d-md-none">ДРУГИЕ </span>
+                      ПРОДУКТЫ</h2>
+                    <div class="catalogue-section__text d-none d-md-block">
+                        <p class="text_size-xl">Все формы CBD и других Каннабиноидовдля пищевого и косметического производства</p>
+                        <a href="#" class="d-flex align-items-center catalogue-section__link">
+                            <div class="circle me-2"><span class="icon icon-arrow icon_double"></span></div>
+                            Подробнее
+                        </a>
+                    </div>
+                </div>
+                <div class="products-slider swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <a href="#" class="product-item">
+                        <div class="product-item__image"><img src="img/content/product-1.jpg" alt="Medcann CBD MD" class="w-100"></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="product-item__body">
+                                <div class="product-item__name text_styling">Medcann CBD MD</div>
+                                <div class="product-item__info">Сухая эмульсия CBD</div>
+                            </div>
+                            <div class="circle circle_md"><span class="icon icon-arrow icon_double"></span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="product-item">
+                        <div class="product-item__image"><img src="img/content/product-2.jpg" alt="Medcann CBD X" class="w-100"></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="product-item__body">
+                                <div class="product-item__name text_styling">Medcann CBD X</div>
+                                <div class="product-item__info">Растительный экстракт CBD Isolate > 99%</div>
+                            </div>
+                            <div class="circle circle_md"><span class="icon icon-arrow icon_double"></span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="product-item">
+                        <div class="product-item__image"><img src="img/content/product-3.jpg" alt="Medcann CBD MD" class="w-100"></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="product-item__body">
+                                <div class="product-item__name text_styling">Medcann CBD MD</div>
+                                <div class="product-item__info">Сухая эмульсия CBD</div>
+                            </div>
+                            <div class="circle circle_md"><span class="icon icon-arrow icon_double"></span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="product-item">
+                        <div class="product-item__image"><img src="img/content/product-4.jpg" alt="Medcann CBD MD" class="w-100"></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="product-item__body">
+                                <div class="product-item__name text_styling">Medcann CBD MD</div>
+                                <div class="product-item__info">Сухая эмульсия CBD</div>
+                            </div>
+                            <div class="circle circle_md"><span class="icon icon-arrow icon_double"></span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="product-item">
+                        <div class="product-item__image"><img src="img/content/product-5.jpg" alt="Medcann CBD MD" class="w-100"></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="product-item__body">
+                                <div class="product-item__name text_styling">Medcann CBD MD</div>
+                                <div class="product-item__info">Сухая эмульсия CBD</div>
+                            </div>
+                            <div class="circle circle_md"><span class="icon icon-arrow icon_double"></span></div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="swiper-slide">
+                      <a href="#" class="product-item">
+                        <div class="product-item__image"><img src="img/content/product-6.jpg" alt="Medcann CBD MD" class="w-100"></div>
+                        <div class="d-flex justify-content-between">
+                            <div class="product-item__body">
+                                <div class="product-item__name text_styling">Medcann CBD MD</div>
+                                <div class="product-item__info">Сухая эмульсия CBD</div>
+                            </div>
+                            <div class="circle circle_md"><span class="icon icon-arrow icon_double"></span></div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-md-none text_center">
+                    <a href="#" class="d-inline-flex align-items-center link">
+                        <div class="circle me-2"><span class="icon icon-arrow icon_double"></span></div>
+                        Все продукты
+                    </a>
+                </div>
+              </section>
+              <!-- /catalogue-section -->
+              <!-- faq -->
+              <section class="faq-section">
+                <h2 class="title title_size-md text_styling text_styling">частые <br>вопросы</h2>
+                <div class="faq-section__content">
+                  <div class="faq-item">
+                      <a href="#faq-1" class="faq-item__title text_size-xxl collapse-link">Правовая сторона CBD</a>
+                      <div class="collapse" id="faq-1">
+                          <div class="faq-item__body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum quas iusto iste maiores nesciunt fuga a dolor, incidunt suscipit repellat ab. Vero totam aliquam ex consequatur, delectus culpa ullam dicta minima eum maxime voluptate dolore ad autem assumenda impedit ipsam repudiandae fugiat, rerum dolor hic sunt quo perspiciatis modi.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <a href="#faq-2" class="faq-item__title text_size-xxl collapse-link">
+                          <span class="d-none d-md-inline">Где можно применять CBD продукцию?</span>
+                          <span class="d-md-none">Где применяют CBD продукцию?</span>
+                      </a>
+                      <div class="collapse" id="faq-2">
+                          <div class="faq-item__body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum quas iusto iste maiores nesciunt fuga a dolor, incidunt suscipit repellat ab. Vero totam aliquam ex consequatur, delectus culpa ullam dicta minima eum maxime voluptate dolore ad autem assumenda impedit ipsam repudiandae fugiat, rerum dolor hic sunt quo perspiciatis modi.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <a href="#faq-3" class="faq-item__title text_size-xxl collapse-link">Какие продукты вы выпускаете?</a>
+                      <div class="collapse" id="faq-3">
+                          <div class="faq-item__body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum quas iusto iste maiores nesciunt fuga a dolor, incidunt suscipit repellat ab. Vero totam aliquam ex consequatur, delectus culpa ullam dicta minima eum maxime voluptate dolore ad autem assumenda impedit ipsam repudiandae fugiat, rerum dolor hic sunt quo perspiciatis modi.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <a href="#faq-4" class="faq-item__title text_size-xxl collapse-link">Есть ли необходимые документы? </a>
+                      <div class="collapse" id="faq-4">
+                          <div class="faq-item__body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum quas iusto iste maiores nesciunt fuga a dolor, incidunt suscipit repellat ab. Vero totam aliquam ex consequatur, delectus culpa ullam dicta minima eum maxime voluptate dolore ad autem assumenda impedit ipsam repudiandae fugiat, rerum dolor hic sunt quo perspiciatis modi.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="faq-item">
+                      <a href="#faq-5" class="faq-item__title text_size-xxl collapse-link">Что говорят врачи? </a>
+                      <div class="collapse" id="faq-5">
+                          <div class="faq-item__body">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione earum quas iusto iste maiores nesciunt fuga a dolor, incidunt suscipit repellat ab. Vero totam aliquam ex consequatur, delectus culpa ullam dicta minima eum maxime voluptate dolore ad autem assumenda impedit ipsam repudiandae fugiat, rerum dolor hic sunt quo perspiciatis modi.
+                          </div>
+                      </div>
+                  </div>
+                  <div class="d-xl-flex align-items-center justify-content-between faq-section__footer">
+                      <div class="me-2 text_size-lg">Не нашли, что искали? Пожалуйста напишите нам.</div>
+                      <a href="#" class="btn btn_secondary btn_size-xxl w-100_md">Отправить заявку</a>
+                  </div>
+                </div>
+              </section>
+              <!-- /faq -->
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="footer-top__content d-md-grid">
+                        <div class="wrap-slider">
+                            <div class="logos-slider swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                                        <img src="img/icons/logo-1.svg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                                        <img src="img/icons/logo-2.svg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                                        <img src="img/icons/logo-3.svg" alt="" class="img-fluid">
+                                    </div>
+                                    <div class="swiper-slide d-flex align-items-center justify-content-center">
+                                        <img src="img/icons/logo-4.svg" alt="" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text_right">
+                            <a href="#" class="btn btn_outline w-100_sm">
+                                <span class="d-none d-lg-inline">Стать партнером Medcann</span>
+                                <span class="d-lg-none">Стать партнером</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container mb-xl">
+                <div class="footer__content">
+                    <div class="footer__links">
+                        <div class="footer__col">
+                            <a href="#col-1" class="d-flex footer__title text_styling text_size-lg collapse-link text_upper">Продукция</a>
+                            <div class="collapse d-md-block" id="col-1">
+                                <ul class="footer-nav text_size-sm">
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Главная</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">О нас</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Продукция</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Сфера применения</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__col">
+                            <a href="#col-2" class="d-flex footer__title text_styling text_size-lg collapse-link text_upper active">Компания</a>
+                            <div class="collapse d-md-block" id="col-2" style="display: block;">
+                                <ul class="footer-nav text_size-sm">
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">О нас</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Ассоциация</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Депозитарий</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Контакты</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__col">
+                            <a href="#col-3" class="d-flex footer__title text_styling text_size-lg collapse-link text_upper">Информация</a>
+                            <div class="collapse d-md-block" id="col-3">
+                                <ul class="footer-nav text_size-sm">
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Юридические документы</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Политика конфиденциальности</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Пользовательское соглашение</a></li>
+                                    <li class="footer-nav__item"><a href="#" class="footer-nav__link">Отказ от ответственности</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__contacts">
+                        <a href="tel:88005501982" class="text_size-lg text_styling footer__phone d-inline-flex">8 (800) 550-19-82</a>
+                        <p class="text_size-sm">Россия, Москва, 1-й Красногвардейский<br> пр-д, д. 20 стр. 1</p>
+                        <ul class="footer__social-list social-list d-flex align-items-center">
+                            <li class="social-list__item"><a href="#" class="social-list__link icon icon-vk" target="_blank"></a></li>
+                            <li class="social-list__item"><a href="#" class="social-list__link icon icon-tg" target="_blank"></a></li>
+                            <li class="social-list__item"><a href="#" class="social-list__link icon icon-youtube" target="_blank"></a></li>
+                            <li class="social-list__item"><a href="#" class="social-list__link icon icon-zen" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom d-lg-flex justify-content-between">
+                    <div class="copyright text_size-xs">Данный продукт не предназначен для использования или продажи лицам, не достигшим 18-летнего возраста. <a href="#">Подробнее</a>
+                        <br>© 2023 Medcann
+                    </div>
+                    <ul class="footer__payment-list payment-list d-flex align-items-center">
+                        <li class="payment-list__item"><img src="img/icons/payment-1.svg" alt="" class="img-fluid"></li>
+                        <li class="payment-list__item"><img src="img/icons/payment-2.svg" alt="" class="img-fluid"></li>
+                        <li class="payment-list__item"><img src="img/icons/payment-3.svg" alt="" class="img-fluid"></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- /footer -->
+
+    </div>
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

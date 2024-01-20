@@ -140,7 +140,12 @@
 .category{
   &-group {
     grid-gap: 0.2rem;
-    padding: 0.5rem 0.6rem 0 0;
+    padding: 0.5rem 0.6rem 0.4rem 0;
+
+    @include bp(md){
+      padding: 0 0 1.1rem;
+      grid-gap: 0.8rem;
+    }
   }
 
   &-block {
@@ -168,14 +173,48 @@
     }
 
     &.active{
-      &:hover{
-        background: $secondary;
-        color: #fff;
+      @include bp(md){
+        background: $secondary!important;
+        color: #fff!important;
+        height: auto;
+        padding-top: 3.4rem;
 
         &:before{
           opacity: 1;
         }
+
+        .category-block__link{
+          top: auto;
+        }
+
+        .circle{
+          border-color: #fff;
+          background: none;
+
+          .icon-arrow{
+            transform: rotate(-90deg);
+
+            &:before{opacity: 0;}
+            &:after{opacity: 1;}
+          }
+        }
       }
+    }
+
+    @include bp(xl){
+      padding: 4rem 3rem 0;
+      grid-template-columns: 14rem auto;
+    }
+
+    @include bp(md){
+      padding: 0.4rem 2.4rem 0;
+      height: 10.2rem;
+      align-items: center;
+      grid-template-columns: 100%;
+      grid-gap: 2.6rem 0;
+      justify-content: space-between;
+      position: relative;
+      align-self: flex-start;
     }
 
     &:before{
@@ -194,21 +233,71 @@
     }
 
 		&__title {
-      margin-bottom: 4.7rem;
+      margin: 0 -2rem 4.7rem 0;
       grid-column: span 2;
       letter-spacing: 0;
       line-height: 1.05;
+
+      @include bp(xl){
+        margin: 0 0 2rem;
+      }
+
+      @include bp(md){
+        margin: 0 5.5rem 0 0;
+        grid-column: span 1;
+        font-size: 2.2rem;
+      }
 		}
 
 		&__image {
       opacity: 0;
       transition: all 0.3s ease-out;
+
+      @include bp(md){
+        display: none;
+        grid-column: span 2;
+        opacity: 1;
+        padding: 0 6.8rem;
+
+        img{
+          margin: 0 auto;
+        }
+      }
 		}
 
 		&__link {
       align-self: flex-end;
       margin-bottom: 4rem;
+
+      @include bp(md){
+        margin-bottom: 0;
+        align-self: center;
+        position: absolute;
+        bottom: 2.4rem;
+        top: 2.4rem;
+        margin: auto 0;
+        right: 2.4rem;
+      }
 		}
-}
+
+    .circle{
+      @include bp(md){
+        width: 4.8rem;
+        height: 4.8rem;
+
+        .icon-arrow{
+          width: 1.6rem;
+          height: 1.4rem;
+
+          &:before{
+            background-image: url(../img/icons/arrow-down.svg);
+          }
+          &:after{
+            background-image: url(../img/icons/arrow-down-inversion-bold.svg);
+          }
+        }
+      }
+    }
+  }
 }
 

@@ -235,6 +235,12 @@
             }
         }
     }
+
+    &_large{
+        @include bp(md-up){
+            min-width: 34.1rem;
+        }
+    }
 }
 
 

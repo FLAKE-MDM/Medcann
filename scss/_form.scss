@@ -13,6 +13,14 @@
                 margin-bottom: 3.2rem;
             }
         }
+
+        &_lg{
+            margin-bottom: 4.7rem;
+
+            @include bp(sm){
+                margin-bottom: 2.7rem;
+            }
+        }
     }
 
     &-control{
@@ -28,6 +36,7 @@
         background: transparent;
         transition: all 0.3s ease-out;
         border-bottom: 1px solid rgba($primary, 0.2);
+        color: $primary;
 
         @include bp(sm){
             font-size: 1.8rem;
@@ -65,27 +74,21 @@
         }
 
         &_date{
-            background: url(../img/icons/calendar.svg) 94% 50% no-repeat;
-            background-size: 15px 16px;
+            background: url(../img/icons/calendar.svg) 100% 55% no-repeat;
+            background-size: 2.4rem 2.4rem;
+        }
+
+        &_md{
+            font-size: 2rem;
+            letter-spacing: -0.14rem;
+            padding: 1.9rem 0 1.6rem;
+
             @include bp(sm){
-                background-position: 94% 50%;
+                font-size: 1.8rem;
+                letter-spacing: -0.126rem;
+                padding-top: 2.5rem;
             }
         }
-        // &_xs{
-        //     text-align: center;
-        //     width: 4.4rem;
-        //     padding: 1.3rem 1rem;
-        //     @include bp(sm){
-        //         width: 4.6rem;
-        //     }
-        // }
-        // &_lg{
-        //     padding: 2.3rem 2.4rem;
-        //     font-size: 1.6rem;
-        //     @include bp(sm){
-        //         padding: 2.2rem 2.3rem;
-        //     }
-        // }
     }
     &-check-input{
         flex-shrink: 0;
@@ -245,34 +248,37 @@
     }
     &__item{
         display: block;
-        font-size: 1.4rem;
-        line-height: 2rem;
-        &:not(:last-child){
-            margin-bottom: 2rem;
-        }
-        &:hover, &.fake-select__item_active{
+        padding: 1rem 2rem;
+        transition: all 0.3s ease-out;
 
+        &.active{
+            background: rgba($dark,0.5);
+        }
+
+        @include bp(hv){
+            &:hover{
+                background: rgba($dark,0.5);
+            }
         }
     }
     &__link{
         white-space: nowrap;
-        &.show{
-        }
-        &.active{
+        border-bottom: 1px solid $primary;
+        padding-top: 2rem;
+        padding-bottom: 1.6rem;
 
-        }
-        &::after, &::before{
-            @include bp(md-up){
-                right: 1.9rem;
-            }
+        @include bp(sm){
+            padding-top: 2.4rem;
         }
     }
+
     &__dropdown{
-        padding: 2rem;
+        padding: 0;
         margin-top: 0.4rem;
         background: #FFFFFF;
         box-shadow: 0px 12px 40px rgba(0, 0, 0, 0.05);
         border-radius: 5px;
+        min-width: 100%;
     }
 }
 
@@ -286,6 +292,7 @@
     top: -0.3rem;
     left: 0;
     color: rgba($primary, 0.5);
+    width: 100%;
 }
 
 .input__label-content--juro {
@@ -298,6 +305,18 @@
     @include bp(sm){
         font-size: 1.8rem;
         letter-spacing: -0.126rem;
+    }
+
+    &_md{
+        font-size: 2rem;
+        letter-spacing: -0.14rem;
+        padding: 2.2rem 0 1.8rem;
+
+        @include bp(sm){
+            font-size: 1.8rem;
+            letter-spacing: -0.126rem;
+            padding-top: 2.7rem;
+        }
     }
 }
 
@@ -325,4 +344,40 @@
 
 .input--filled .form-control_inversion{
     border-color: #fff;
+}
+
+.input{
+    position: relative;
+}
+
+// ui
+.ui-datepicker-prev {
+    left: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    top: 0.2rem !important;
+    cursor: pointer;
+}
+
+.ui-datepicker-next {
+    right: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    top: 0.2rem !important;
+    cursor: pointer;
+}
+
+.ui-icon-circle-triangle-w {
+    background: url(../img/icons/prev-caret.svg) 50% 50% no-repeat !important;
+    background-size: contain;
+}
+
+.ui-icon-circle-triangle-e {
+    background: url(../img/icons/next-caret.svg) 50% 50% no-repeat !important;
+    background-size: contain;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight{
+    color: #fff;
+    background: $secondary;
 }

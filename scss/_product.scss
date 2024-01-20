@@ -626,6 +626,27 @@
     }
   }
 
+  &_padding{
+    padding: 0;
+    margin-top: -0.5rem;
+
+    &:before, &:after{
+      display: none;
+    }
+
+    @include bp(lg-up){
+      grid-template-columns: auto 65%;
+    }
+
+    @include bp(xl-up){
+      grid-template-columns: auto 58.1%;
+    }
+
+    @include bp(sm){
+      padding-bottom: 5.7rem;
+    }
+  }
+
   .text_size-xl{
     @include bp(sm){
       font-size: 2rem;

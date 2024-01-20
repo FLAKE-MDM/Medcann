@@ -139,6 +139,12 @@
       margin-right: auto;
     }
 
+    &_about{
+      @include bp(sm){
+        padding: 0;
+      }
+    }
+
     &__content{
       display: grid;
       grid-template-columns: 41.6% auto;
@@ -162,6 +168,125 @@
         border: none;
         margin-bottom: 4rem;
         padding-bottom: 0;
+      }
+
+      &_sm{
+        border: none;
+        padding-bottom: 4.2rem;
+
+        @include bp(xxl-up){
+          grid-template-columns: 29.65% auto;
+        }
+
+        @include bp(xxxl-up){
+          padding-left: 5.7%;
+
+          .info-section__col{
+            margin-top: -0.4rem;
+            padding-right: 10%;
+          }
+
+          .text_size-lg{
+            line-height: normal;
+          }
+        }
+
+        @include bp(md){
+          padding-bottom: 0;
+        }
+
+        @include bp(sm){
+          padding: 0 1.6rem;
+          margin: 0;
+        }
+
+        .info-section__col{
+          @include bp(sm){
+            padding-right: 0;
+          }
+        }
+
+        .mb-md{
+          @include bp(sm){
+            margin-bottom: 4rem;
+          }
+        }
+
+        .mb-xsm{
+          @include bp(sm){
+            &:not(:last-child){
+              margin-bottom: 3.3rem;
+            }
+          }
+        }
+      }
+
+      &_md{
+        padding-bottom: 9.8rem;
+
+        @include bp(xxl-up){
+          grid-template-columns: 29.65% auto;
+
+          .title{
+            margin-top: 0.4rem;
+          }
+        }
+
+        @include bp(xxxl-up){
+          padding-left: 5.7%;
+        }
+
+        @include bp(sm){
+          padding: 0 1rem 0 1.6rem;
+          margin: 0 0 -0.6rem;
+        }
+
+        .info-section__col{
+          @include bp(sm){
+            padding-right: 0;
+          }
+        }
+      }
+
+      &_lg{
+        padding-bottom: 2.6rem;
+        border: none;
+
+        @include bp(sm){
+          padding-bottom: 0;
+        }
+
+        @include bp(xxxl-up){
+          grid-template-columns: 33.1% auto;
+
+          .title{
+            margin-top: 0.4rem;
+          }
+        }
+
+        @include bp(xl){
+          grid-template-columns: 100%;
+        }
+
+        .info-section__col{
+          @include bp(xxxl-up){
+            padding-right: 14%;
+          }
+
+          @include bp(sm){
+            padding-right: 0;
+          }
+        }
+
+        .link{
+          @include bp(sm){
+            margin-top: 0.3rem;
+
+            .icon{
+              transform: rotate(90deg);
+            }
+          }
+        }
       }
     }
 
@@ -939,6 +1064,39 @@
       padding: 3.6rem 2.4rem;
     }
 
+    &_before{
+      position: relative;
+
+      &:before, &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 600%;
+        left: -200%;
+        height: 4.4rem;
+        background: $secondary url(../img/blog-before.png) 0 50% repeat-x;
+        z-index: -1;
+        top: 9rem;
+        transform: rotate(-1deg);
+
+        @include bp(sm){
+          height: 1.9rem;
+          top: -2.5rem;
+          transform: rotate(0);
+          background-size: auto 90%;
+        }
+      }
+
+      &:before{
+        transform: rotate(-12deg);
+        top: -12rem;
+
+        @include bp(sm){
+          display: none;
+        }
+      }
+    }
+
     .title{
       @include bp(xl){
         margin-bottom: 3rem;
@@ -1085,6 +1243,16 @@
       }
     }
   }
+
+  &_clear{
+    padding-top: 1rem;
+
+    .tab-nav__link{
+      &:before{
+        display: none;
+      }
+    }
+  }
 }
 
 .amount{
@@ -1179,9 +1347,12 @@
       grid-template-columns: 30% auto;
     }
 
+    @include bp(md){
+      grid-template-columns: 100%;
+    }
+
     @include bp(sm){
       margin: -0.5rem 0 6rem;
-      grid-template-columns: 100%;
     }
 
     &__content{

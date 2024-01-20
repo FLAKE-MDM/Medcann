@@ -1,0 +1,184 @@
+.about{
+  &-preview{
+    background: #001D33 url(../img/bg-about.jpg) 50% 50% no-repeat;
+    background-size: cover;
+    padding: 9.5rem 10rem 6rem;
+    margin-top: 5rem;
+    display: grid;
+    grid-template-columns: auto 31.6%;
+    grid-gap: 0 12%;
+    margin-bottom: 11.1rem;
+
+    @include bp(xxl){
+      padding: 6rem 5rem;
+      grid-gap: 0 7%;
+    }
+
+    @include bp(lg){
+      padding: 3.7rem 3.2rem 4rem;
+      grid-gap: 0 3rem;
+    }
+
+    @include bp(md){
+      grid-template-columns: 100%;
+    }
+
+    @include bp(sm){
+      margin: 0 -1.6rem 5.7rem;
+    }
+
+    &__image{
+      grid-row: span 2;
+      margin-top: 5.7rem;
+
+      @include bp(md){
+        grid-row: span 1;
+        display: flex;
+        justify-content: center;
+      }
+
+      @include bp(sm){
+        width: 16.4rem;
+        margin: 3.2rem auto -0.5rem;
+      }
+    }
+
+    &__title{
+      margin-bottom: 7.4rem;
+
+      @include bp(lg){
+        margin-bottom: 3rem;
+      }
+
+    }
+
+    &__group{
+      grid-gap: 10%;
+      margin-top: 2.1rem;
+
+      @include bp(lg){
+        grid-gap: 4rem;
+      }
+
+      @include bp(sm){
+        margin: 0;
+      }
+
+      .statistics-item{
+        padding-right: 2rem;
+
+        @include bp(xl){
+          padding: 0;
+        }
+      }
+
+      .statistics-item__title{
+        @include bp(sm){
+          margin-bottom: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+// case
+.cases-section{
+  padding: 0.5rem 0 1.7rem;
+
+  @include bp(sm){
+    padding: 0;
+    margin-top: -0.3rem;
+  }
+
+  &__group{
+    padding-top: 1.4rem;
+
+    @include bp(sm){
+      padding: 0.7rem 0 0.1rem;
+    }
+  }
+
+  &__title{
+    @include bp(sm){
+      padding: 0 1.6rem;
+    }
+  }
+}
+
+.case-item{
+  background: #fff;
+  display: grid;
+  grid-template-columns: 52% 34.2%;
+  justify-content: space-between;
+  padding: 2.5rem;
+
+  @include bp(xl){
+    grid-template-columns: 64% auto;
+  }
+
+  @include bp(sm){
+    padding: 1.2rem;
+    grid-template-columns: 100%;
+    margin-bottom: 1.6rem;
+  }
+
+  &__text{
+    padding: 6.4rem 7.5rem 3.9rem;
+    line-height: normal;
+    letter-spacing: -0.168rem;
+
+    @include bp(xxl){
+      padding: 2rem;
+    }
+
+    @include bp(xl){
+      padding: 0 2rem 0 0;
+    }
+
+    @include bp(sm){
+      padding: 0 0.8rem 0.8rem;
+      font-size: 1.8rem;
+      letter-spacing: -0.126rem;
+      line-height: 1.22;
+    }
+  }
+
+  &__title{
+    @include bp(xl){
+      margin-bottom: 2rem;
+    }
+
+    @include bp(sm){
+      font-size: 2.4rem;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  &__image{
+    @include bp(sm){
+      height: 18.8rem;
+      margin-bottom: 1.4rem;
+
+      img{
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .circle{
+    @include bp(sm){
+      width: 4.6rem;
+      height: 4.6rem;
+
+      .icon-arrow{
+        &:before {
+          background-image: url(../img/icons/arrow-m.svg);
+        }
+        &:after {
+          background-image: url(../img/icons/arrow-m-inversion.svg);
+        }
+      }
+    }
+  }
+}

@@ -19,9 +19,24 @@ a{
             &.text_light{
                 color: $light;
             }
+
+            &.text_inversion{
+                color: $dark;
+            }
         }
     }
 }
+
+.link_active{
+    color: #0043AB;
+
+    @include bp(hv){
+        &:hover{
+            color: $primary;
+        }
+    }
+}
+
 // .link_underline{
 //     display: inline-block;
 //     padding-bottom: 0.8rem;
@@ -81,6 +96,15 @@ p{
         }
         &-lg{
             font-size: 9rem;
+            line-height: 1.04;
+
+            @include bp(xl){
+                font-size: 7rem;
+            }
+
+            @include bp(lg){
+                font-size: 4.8rem;
+            }
         }
         &-xl{
             font-size: 14rem;
@@ -94,7 +118,7 @@ p{
                 font-size: 10rem;
             }
 
-            @include bp(md){
+            @include bp(lg){
                 font-size: 8rem;
             }
 
@@ -163,8 +187,8 @@ p{
         }
     }
     // colors
-    &_primary{
-
+    &_secondary{
+        color: $secondary;
     }
 
     &_inversion{
@@ -177,6 +201,10 @@ p{
 
     &_dark{
         color: $dark;
+    }
+
+    &_gray{
+        color: #738CA1;
     }
 
     // weight
@@ -218,7 +246,6 @@ p{
     }
 
     &_bg{
-        white-space: nowrap;
         background: #AED7F5;
         padding: 0 0.3rem;
 

@@ -41,7 +41,14 @@
 .icon-arrow-down-inversion{
     width: 1.6rem;
     height: 2.5rem;
-    background-image: url(../img/icons/arrow-down-inversion.svg);
+
+    &:before{
+        background-image: url(../img/icons/arrow-down-inversion.svg);
+    }
+
+    &:after{
+        background-image: url(../img/icons/arrow-down-md.svg);
+    }
 }
 
 .icon-info-1{
@@ -120,7 +127,14 @@
 .icon-arrow-inversion{
     width: 2.5rem;
     height: 1.6rem;
-    background-image: url(../img/icons/arrow-inversion.svg);
+
+    &:before{
+        background-image: url(../img/icons/arrow-inversion.svg);
+    }
+
+    &:after{
+        background-image: url(../img/icons/arrow.svg);
+    }
 }
 
 .icon-arrow{
@@ -166,6 +180,12 @@
     background-image: url(../img/icons/info.svg);
 }
 
+.icon-info-primary{
+    width: 2.4rem;
+    height: 2.4rem;
+    background-image: url(../img/icons/info-primary.svg);
+}
+
 .icon-arrow-down{
     width: 1.6rem;
     height: 1.4rem;
@@ -190,11 +210,32 @@
     }
 }
 
+.icon-doc{
+    width: 9.5rem;
+    height: 9.5rem;
+    background-image: url(../img/icons/doc.svg);
 
+    @include bp(sm){
+      width: 7.2rem;
+      height: 7.2rem;
+    }
+}
 
+.icon-arrow-down-sm-inversion{
+    width: 1.6rem;
+    height: 1.4rem;
+    background-image: url(../img/icons/arrow-down-sm-inversion.svg);
+}
 
+.icon-caret-dark{
+    width: 1.7rem;
+    height: 1rem;
+    background-image: url(../img/icons/caret-dark.svg);
 
-
+    @include bp(sm){
+        background-image: url(../img/icons/caret.svg);
+    }
+}
 
 
 .icon-{

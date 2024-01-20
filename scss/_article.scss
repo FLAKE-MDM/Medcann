@@ -1,0 +1,376 @@
+.article{
+  &-row{
+    padding-top: 0.5rem;
+
+    @include bp(sm){
+      padding-top: 1.2rem;
+    }
+  }
+
+  &-block {
+    padding: 2.4rem 3.2rem 3.2rem;
+    overflow: hidden;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    min-height: 34.8rem;
+
+    @include bp(lg){
+      min-height: 21rem;
+    }
+
+    @include bp(md){
+      padding: 2.4rem 2.4rem 3.2rem;
+    }
+
+    &__image {
+      margin: -0.9rem -1.7rem 3.8rem;
+      position: relative;
+
+      @include bp(md){
+        margin: -1.2rem -1.2rem 4.2rem;
+        height: 21.7rem;
+
+        img{
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_margin{
+        margin-bottom: 1.9rem;
+
+        @include bp(md){
+          margin: -1.2rem -1.2rem 2.5rem;
+        }
+      }
+
+      &_before{
+        &:before, &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          height: 2.4rem;
+          background: #fff url(../img/article-before.png) 4% 50% repeat-x;
+          left: -3rem;
+          right: -3rem;
+          transform: rotate(-1deg);
+          bottom: -1rem;
+
+          @include bp(sm){
+            height: 1.4rem;
+            background-size: auto 90%;
+            background-position: 8% 30%;
+            bottom: -0.9rem;
+          }
+        }
+
+        &:before{
+          transform: rotate(12deg);
+          bottom: 1.4rem;
+          background-position: -45% 50%;
+
+          @include bp(sm){
+            bottom: 0.4rem;
+            background-position: -37% 30%;
+          }
+        }
+      }
+    }
+
+    .btn{
+      @include bp(sm){
+        font-size: 1.8rem;
+        padding: 1.3rem 2.4rem;
+      }
+    }
+
+    &__title {
+      margin-bottom: 7.5rem;
+
+      @include bp(sm){
+        margin-bottom: 1.5rem;
+      }
+
+      &_margin{
+        margin-bottom: 5rem;
+
+        @include bp(sm){
+          margin-bottom: 1.9rem;
+        }
+      }
+
+      &.text_inversion{
+        @include bp(hv){
+          &:hover{
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &__date {
+      @include bp(sm){
+        font-size: 1.4rem;
+        letter-spacing: -0.098rem;
+        margin: 0 0.8rem -0.5rem 0;
+      }
+    }
+  }
+
+  &-section{
+    margin-top: -0.5rem;
+    display: grid;
+    grid-template-columns: 29% auto;
+    grid-gap: 3.1rem;
+    padding-bottom: 0.3rem;
+
+    @include bp(lg){
+      grid-template-columns: 31% auto;
+    }
+
+    @include bp(md){
+      grid-template-columns: 100%;
+      grid-gap: 0;
+    }
+
+    @include bp(sm){
+      padding-top: 2.7rem;
+      margin-bottom: 1.3rem;
+    }
+
+    &__title{
+      margin-bottom: 2rem;
+    }
+
+    &__content{
+      padding-top: 0.5rem;
+    }
+  }
+
+  &-item{
+    display: grid;
+    grid-template-columns: 54% 11rem;
+    border-bottom: 1px solid rgba($primary, 0.2);
+    padding-bottom: 3.2rem;
+    margin-bottom: 3.2rem;
+    min-height: 12.1rem;
+
+    @include bp(xl){
+      grid-gap: 2rem;
+      grid-template-columns: 75% 11rem;
+    }
+
+    @include bp(md){
+      min-height: 1rem;
+      padding-bottom: 1.2rem;
+      margin-bottom: 1.7rem;
+    }
+
+    @include bp(sm){
+      grid-template-columns: 100%;
+      grid-gap: 1.1rem 0;
+      padding-right: 5%;
+    }
+
+    &__date{
+      text-align: right;
+
+      @include bp(sm){
+        text-align: left;
+        font-size: 1.4rem;
+        letter-spacing: -0.098rem;
+      }
+    }
+  }
+}
+
+
+// article-page
+.article{
+  width: 1460px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.2rem 0 2rem;
+
+  @include bp(sm){
+    padding: 0.8rem 0 0.9rem;
+  }
+
+  &__date{
+    letter-spacing: -0.168rem;
+    margin-bottom: 0.5rem;
+
+    @include bp(sm){
+      font-size: 1.4rem;
+      letter-spacing: -0.098rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+
+  .title_size-md{
+    @include bp(xxl-up){
+      font-size: 7.2rem;
+      line-height: normal;
+      letter-spacing: -0.5rem;
+      margin-bottom: 3.2rem;
+    }
+
+    @include bp(sm){
+      font-size: 2.8rem;
+      letter-spacing: -0.196rem;
+      line-height: normal;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__category{
+    padding: 0.7rem 1.2rem;
+
+    @include bp(sm){
+      font-size: 1.8rem;
+      padding: 0.8rem 1.2rem;
+      margin-bottom: 0.6rem;
+    }
+  }
+
+  &__image{
+    @include bp(sm){
+      margin: 0 -1.6rem 3.5rem;
+      height: 24rem;
+
+      img{
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__content{
+    display: grid;
+    grid-template-columns: 37% auto;
+    grid-gap: 5.2rem;
+    padding-bottom: 1.5rem;
+
+    @include bp(lg){
+      grid-gap: 4rem 3rem;
+    }
+
+    @include bp(md){
+      grid-template-columns: 100%;
+    }
+
+    @include bp(sm){
+      padding-right: 7%;
+      grid-gap: 2.1rem 0;
+      padding-bottom: 2.1rem;
+    }
+  }
+
+  &__col{
+    @include bp(xxl-up){
+      padding-right: 5%;
+    }
+
+    @include bp(sm){
+      padding-left: 0.5rem;
+    }
+
+    .text_size-lg{
+      letter-spacing: -0.168rem;
+      line-height: 1.5;
+
+      @include bp(sm){
+        letter-spacing: -0.126rem;
+        font-size: 1.8rem;
+        line-height: 1.22;
+      }
+    }
+
+    p{
+      @include bp(xxl-up){
+        padding-right: 10%;
+      }
+
+      @include bp(sm){
+        margin-right: -0.5rem;
+      }
+    }
+
+    .mb-xsm{
+      @include bp(sm){
+        margin-bottom: 4.1rem;
+      }
+    }
+
+    .mb-md{
+      @include bp(sm){
+        margin-bottom: 4.1rem;
+      }
+    }
+
+    .dots-list{
+      @include bp(sm){
+        margin-top: -2.1rem;
+      }
+    }
+  }
+
+  &__title{
+    @include bp(xxl-up){
+      font-size: 4.8rem;
+      letter-spacing: -0.336rem;
+      line-height: normal;
+    }
+
+    @include bp(sm){
+      line-height: normal;
+      font-size: 2.8rem;
+      letter-spacing: -0.196rem;
+    }
+  }
+
+  &__link{
+    @include bp(sm){
+      margin-top: -1rem;
+    }
+  }
+}
+
+.dots-list{
+  line-height: 150%;
+
+  @include bp(xxl-up){
+    padding-right: 11%;
+  }
+
+  &__item{
+    position: relative;
+    padding-left: 3.7rem;
+
+    @include bp(sm){
+      padding-left: 2.7rem;
+      margin-bottom: 2.2rem;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 50%;
+      width: 0.8rem;
+      height: 0.8rem;
+      background: $primary;
+      left: 1.4rem;
+      top: 1.5rem;
+
+      @include bp(sm){
+        width: 0.6rem;
+        height: 0.6rem;
+        left: 1.1rem;
+        top: 0.9rem;
+      }
+    }
+  }
+}

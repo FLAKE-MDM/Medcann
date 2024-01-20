@@ -1,0 +1,235 @@
+.legal{
+  &-section{
+    padding: 10rem 10rem 9.8rem;
+    position: relative;
+    margin-bottom: 13.1rem;
+
+    @include bp(xxxl-up){
+      padding-right: 16%;
+    }
+
+    @include bp(xxl){
+      padding: 5rem;
+    }
+
+    @include bp(md){
+      padding: 3rem;
+    }
+
+    @include bp(sm){
+      margin: 0 -1.6rem 5.7rem;
+      padding: 4rem 2rem 2.5rem 1.6rem;
+    }
+
+    &:after{
+      content: "";
+      display: block;
+      position: absolute;
+      right: 8.3rem;
+      bottom: 0;
+      width: 8rem;
+      height: 39.1rem;
+      background: url(../img/icons/flower.svg) 0 0 no-repeat;
+      background-size: 100% auto;
+
+      @include bp(xxl){
+        height: 25rem;
+        right: 3rem;
+      }
+
+      @include bp(lg){
+        height: 15rem;
+      }
+
+      @include bp(sm){
+        width: 5rem;
+        height: 9.3rem;
+        right: 3.7rem;
+      }
+    }
+
+    &__content{
+      margin-bottom: 10rem;
+
+      @include bp(lg){
+        margin-bottom: 4.7rem;
+      }
+
+      @include bp(sm){
+        line-height: 1.23;
+      }
+    }
+
+    &__row{
+      display: grid;
+      grid-template-columns: 8.8rem 53.2% 30%;
+      grid-gap: 0 7.7rem;
+
+      @include bp(xxl){
+        grid-gap: 0 4rem;
+      }
+
+      @include bp(lg){
+        grid-template-columns: 100%;
+        grid-gap: 3rem 0;
+      }
+
+      @include bp(sm){
+        grid-gap: 2.2rem 0;
+      }
+    }
+
+    &__text{
+      letter-spacing: -0.168rem;
+      line-height: normal;
+
+      @include bp(xxxxl-up){
+        padding-right: 7%;
+      }
+
+      @include bp(sm){
+        font-size: 1.8rem;
+        padding-right: 12%;
+        letter-spacing: -0.126rem;
+        line-height: 1.23;
+        padding-top: 0.3rem;
+      }
+    }
+
+    &__btn{
+      margin: 0.6rem 0 0 0.1rem;
+
+      @include bp(sm){
+        margin: 0 -0.1rem;
+
+        .icon{
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+
+.info-block{
+  padding: 1.9rem 2rem 2.1rem;
+  color: #0043AB;
+
+  @include bp(xxxl-up){
+    padding-right: 9.8%;
+  }
+
+  @include bp(sm){
+    margin: 0 -1.6rem;
+    font-size: 2rem;
+    padding: 1.9rem 2rem 2rem 1.6rem;
+    letter-spacing: -0.14rem;
+  }
+}
+
+// documents
+.btn-nav{
+  padding-top: 0.4rem;
+  gap: 2.4rem;
+
+  @include bp(xxl){
+    margin-top: 2.5rem;
+    padding: 0;
+  }
+
+  @include bp(lg){
+    gap: 1.2rem;
+    overflow: auto;
+  }
+
+  @include bp(sm){
+    margin-right: -1.6rem;
+  }
+
+  &__link{
+    padding-left: 3.2rem;
+    padding-right: 3.2rem;
+
+    @include bp(sm){
+      font-size: 1.8rem;
+      padding: 1.3rem 1.6rem;
+    }
+  }
+}
+
+.documents{
+  &-section{
+    padding-bottom: 0.3rem;
+
+    @include bp(sm){
+      padding: 0;
+    }
+  }
+
+  &-group{
+    grid-gap: 2rem;
+    padding-top: 0.6rem;
+
+    @include bp(sm){
+      padding: 0.2rem 0 1rem;
+      grid-gap: 1.6rem 0;
+    }
+  }
+}
+
+.document-item{
+  background: #fff;
+  padding: 4.4rem 3.9rem 4rem;
+  display: flex;
+  flex-direction: column;
+  min-height: 48.6rem;
+
+  @include bp(lg){
+    padding: 2.9rem 2.4rem 2.4rem;
+    min-height: 40rem;
+  }
+
+  @include bp(md){
+    min-height: 1px;
+  }
+
+  &__icon{
+    margin-bottom: auto;
+
+    @include bp(md){
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__title{
+    margin-bottom: 2.3rem;
+    line-height: 105%;
+
+    @include bp(sm){
+      margin-bottom: 2.6rem;
+    }
+  }
+
+  &__date{
+    margin-bottom: 3.1rem;
+
+    @include bp(sm){
+      margin-bottom: 2.3rem;
+    }
+  }
+
+  &__btn{
+    position: relative;
+
+    .icon{
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 2.4rem;
+      margin: auto 0;
+
+      @include bp(sm){
+        right: 1.5rem;
+      }
+    }
+  }
+}

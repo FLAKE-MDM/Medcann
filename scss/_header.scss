@@ -32,6 +32,33 @@
         }
     }
 
+    &_dark{
+        background: $primary;
+
+        @include bp(xl-up){
+            position: static;
+            padding: 3rem;
+
+            .container{
+                padding: 0;
+            }
+        }
+
+        @include bp(xxl-up){
+            padding: 3.9rem 5rem 3.7rem 12.2%;
+        }
+
+        .btn-menu__item{
+            background: #fff;
+        }
+
+        .header__collapse{
+            @include bp(md-up){
+                max-height: calc(100vh - 6.4rem);
+            }
+        }
+    }
+
     &__logo{
         margin-top: -0.2rem;
 
