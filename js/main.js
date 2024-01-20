@@ -15,7 +15,7 @@ if(loaderText){
 
     if (progress === 100) {
       clearInterval(interval);
-      // $('.loader').addClass('hide')
+      $('.loader').addClass('hide')
     }
   }, 20);
 }
