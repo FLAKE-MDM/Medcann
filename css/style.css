@@ -2195,7 +2195,7 @@ body.overflow-none {
   }
 }
 .header_bg {
-  background: #E5EEF9;
+  background: #e5eef9;
 }
 @media only screen and (max-width: 767px) {
   .header_bg {
@@ -2204,7 +2204,7 @@ body.overflow-none {
 }
 @media only screen and (max-width: 767px) {
   .header_bg-mobile {
-    background: #E5EEF9;
+    background: #e5eef9;
   }
 }
 .header_dark {
@@ -2327,7 +2327,7 @@ body.overflow-none {
   display: inline-flex;
 }
 .nav-list__link.active {
-  color: #0043AB;
+  color: #0043ab;
 }
 
 .btn-menu {
@@ -2464,7 +2464,7 @@ body.overflow-none {
 }
 @media only screen and (max-width: 767px) {
   .navigation-list__link:not(.active) {
-    color: #8094A4;
+    color: #8094a4;
   }
 }
 .navigation-list__link.active:before {
@@ -2509,17 +2509,27 @@ body.overflow-none {
     top: 0;
   }
 }
-@media only screen and (max-width: 767px) {
+.callback__close {
+  position: absolute;
+  top: 2.4rem;
+  right: 2.4rem;
+  width: 4rem;
+  height: 4rem;
+  left: auto;
+  bottom: auto;
+  background: url(../img/icons/close.svg) 0 0 no-repeat;
+  background-size: contain;
+  cursor: pointer;
+}
+@media (hover: hover) and (pointer: fine) {
+  .callback__close:hover {
+    opacity: 0.5;
+  }
+}
+@media only screen and (max-width: 991px) {
   .callback__close {
-    position: absolute;
-    top: 2.4rem;
-    right: 2.4rem;
     width: 2.4rem;
     height: 2.4rem;
-    left: auto;
-    bottom: auto;
-    background: url(../img/icons/close.svg) 0 0 no-repeat;
-    background-size: contain;
   }
 }
 .callback__content {
